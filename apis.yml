@@ -1,74 +1,54 @@
+aid: axiom
 name: Axiom
-description: Axiom is a serverless log management and analytics platform that provides real-time insights into structured and unstructured data with fast querying capabilities.
-url: https://axiom.co
-created: 2024-01-15 00:00:00+00:00
-modified: 2024-01-15 00:00:00+00:00
-apis:
-- name: Axiom API
-  description: RESTful API for ingesting, querying, and managing logs and events in Axiom
-  baseURL: https://api.axiom.co
-  humanURL: https://axiom.co/docs
-  properties:
-  - type: Documentation
-    url: https://axiom.co/docs/restapi/introduction
-  - type: OpenAPI
-    url: https://api.axiom.co/v1/openapi.json
-  - type: Authentication
-    url: https://axiom.co/docs/restapi/token
-  contact:
-  - FN: Axiom Support
-    email: support@axiom.co
-    url: https://axiom.co/support
-  endpoints:
-  - name: Ingest Events
-    description: Ingest events and logs into datasets
-    method: POST
-    path: /v1/datasets/{datasetName}/ingest
-  - name: Query Data
-    description: Execute APL queries against datasets
-    method: POST
-    path: /v1/datasets/{datasetName}/query
-  - name: List Datasets
-    description: Retrieve all datasets in the organization
-    method: GET
-    path: /v1/datasets
-  - name: Create Dataset
-    description: Create a new dataset
-    method: POST
-    path: /v1/datasets
-  - name: Get Dataset Info
-    description: Get information about a specific dataset
-    method: GET
-    path: /v1/datasets/{datasetName}
-  - name: Delete Dataset
-    description: Delete a dataset
-    method: DELETE
-    path: /v1/datasets/{datasetName}
-common:
-- type: Authentication
-  description: API Token authentication via Bearer token
-- type: Rate Limits
-  description: Rate limits apply based on plan tier
-- type: Status Page
-  url: https://status.axiom.co
-- type: Blog
-  url: https://axiom.co/blog
-- type: GitHub
-  url: https://github.com/axiomhq
-- type: Twitter
-  url: https://twitter.com/AxiomFM
-- type: Terms of Service
-  url: https://axiom.co/terms
-- type: Privacy Policy
-  url: https://axiom.co/privacy
-maintainers:
-- FN: Axiom Team
-  email: hello@axiom.co
-  url: https://axiom.co
+description: >-
+  Axiom is a serverless log management and analytics platform that provides
+  real-time insights into structured and unstructured data with fast querying
+  capabilities for logs, events, and telemetry data.
+type: Index
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 tags:
-- logging
-- analytics
-- observability
-- serverless
-- real-time
-- log management
+  - Logging
+  - Analytics
+  - Observability
+  - Serverless
+  - Real-Time
+  - Log Management
+url: https://raw.githubusercontent.com/api-evangelist/axiom/refs/heads/main/apis.yml
+created: '2024-01-15'
+modified: '2026-03-16'
+specificationVersion: '0.19'
+apis:
+  - aid: axiom:axiom-api
+    name: Axiom API
+    description: RESTful API for ingesting, querying, and managing logs and events in Axiom.
+    humanURL: https://axiom.co/docs/restapi/introduction
+    baseURL: https://api.axiom.co
+    tags:
+      - Logging
+      - Analytics
+      - Observability
+    properties:
+      - type: Documentation
+        url: https://axiom.co/docs/restapi/introduction
+      - type: OpenAPI
+        url: https://api.axiom.co/v1/openapi.json
+      - type: Authentication
+        url: https://axiom.co/docs/restapi/token
+common:
+  - type: Portal
+    url: https://axiom.co/
+  - type: Status
+    url: https://status.axiom.co
+  - type: Blog
+    url: https://axiom.co/blog
+  - type: GitHub Organization
+    url: https://github.com/axiomhq
+  - type: Terms of Service
+    url: https://axiom.co/terms
+  - type: Privacy Policy
+    url: https://axiom.co/privacy
+  - type: Sign Up
+    url: https://app.axiom.co/register
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
