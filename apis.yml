@@ -7,12 +7,12 @@ description: >-
 type: Index
 image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 tags:
-  - Logging
   - Analytics
-  - Observability
-  - Serverless
-  - Real-Time
   - Log Management
+  - Logging
+  - Observability
+  - Real-Time
+  - Serverless
 url: https://raw.githubusercontent.com/api-evangelist/axiom/refs/heads/main/apis.yml
 created: '2024-01-15'
 modified: '2026-03-16'
@@ -24,8 +24,8 @@ apis:
     humanURL: https://axiom.co/docs/restapi/introduction
     baseURL: https://api.axiom.co
     tags:
-      - Logging
       - Analytics
+      - Logging
       - Observability
     properties:
       - type: Documentation
