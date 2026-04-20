@@ -1,41 +1,44 @@
-# Axiom (axiom)
-Axiom is a serverless log management and analytics platform that provides real-time insights into structured and unstructured data with fast querying capabilities.
+# Axiom
 
-**URL:** [Visit APIs.json URL](https://axiom.co)
-
-## Tags:
-
- - logging, analytics, observability, serverless, real-time, log management
-
-## Timestamps
-
-- **Created:** 2024-01-15 00:00:00+00:00 
-- **Modified:** 2024-01-15 00:00:00+00:00 
+Axiom is a serverless log management and analytics platform that provides real-time insights into structured and unstructured data with fast querying capabilities for logs, events, and telemetry data.
 
 ## APIs
 
 ### Axiom API
-RESTful API for ingesting, querying, and managing logs and events in Axiom
+RESTful API for ingesting, querying, and managing logs and events in Axiom.
+- **Documentation**: https://axiom.co/docs/restapi/introduction
+- **Authentication**: https://axiom.co/docs/restapi/token
 
-**Human URL:** [https://axiom.co/docs](https://axiom.co/docs)
+## Features
 
-#### Properties
+- **Serverless Log Management** — Manage logs without managing servers or storage infrastructure.
+- **Real-Time Querying** — Query billions of events in seconds with APL (Axiom Processing Language).
+- **Dataset Organization** — Organize data into datasets with role-based access control.
+- **Monitors and Alerts** — Create monitors with notifications to Slack, PagerDuty, and email.
+- **OpenTelemetry Native** — Native OTLP ingestion for logs, metrics, and traces.
+- **Endless Retention** — Store data indefinitely with query-optimized cold storage.
+- **Dashboards** — Build and share monitoring dashboards with rich visualization options.
+- **Annotations** — Mark events like deployments on dashboards for correlation analysis.
 
-- [Documentation](https://axiom.co/docs/restapi/introduction)
-- [OpenAPI](https://api.axiom.co/v1/openapi.json)
-- [Authentication](https://axiom.co/docs/restapi/token)
+## Use Cases
 
-## Common Properties
+- **Application Logging** — Centralize application logs for debugging and error analysis.
+- **DevOps Observability** — Monitor CI/CD pipelines, deployments, and infrastructure health.
+- **Security Analytics** — Analyze audit logs and detect security anomalies.
+- **Edge Function Monitoring** — Monitor Vercel, Cloudflare, and other edge function execution.
+- **Distributed Tracing** — Trace requests across services using OpenTelemetry OTLP.
 
-- [Status Page](https://status.axiom.co)
-- [Blog](https://axiom.co/blog)
-- [GitHub](https://github.com/axiomhq)
-- [Twitter](https://twitter.com/AxiomFM)
-- [Terms of Service](https://axiom.co/terms)
-- [Privacy Policy](https://axiom.co/privacy)
+## Links
+
+- **Portal**: https://axiom.co/
+- **Documentation**: https://axiom.co/docs
+- **Getting Started**: https://axiom.co/docs/get-started
+- **Pricing**: https://axiom.co/pricing
+- **Blog**: https://axiom.co/blog
+- **GitHub**: https://github.com/axiomhq
+- **Status**: https://status.axiom.co
+- **Sign Up**: https://app.axiom.co/register
 
 ## Maintainers
 
-**FN:** Axiom Team
-
-**Email:** hello@axiom.co
+- **Kin Lane** — kin@apievangelist.com
