@@ -34,6 +34,8 @@ apis:
     url: https://axiom.co/docs/restapi/introduction
   - type: Authentication
     url: https://axiom.co/docs/restapi/token
+  - type: OpenAPI
+    url: openapi/axiom-openapi.yml
 common:
 - type: Portal
   url: https://axiom.co/
