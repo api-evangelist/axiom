@@ -1,0 +1,2653 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: Axiom REST API
+  description: 'Axiom REST API. 88 operations. Lead operation: List all annotations. Self-contained Naftiko capability covering
+    one Axiom business surface.'
+  tags:
+  - Axiom
+  - Axiom REST API
+  created: '2026-05-19'
+  modified: '2026-05-19'
+binds:
+- namespace: env
+  keys:
+    AXIOM_API_KEY: AXIOM_API_KEY
+capability:
+  consumes:
+  - type: http
+    namespace: axiom
+    baseUri: https://api.axiom.co
+    description: Axiom REST API business capability. Self-contained, no shared references.
+    resources:
+    - name: annotations
+      path: /annotations
+      operations:
+      - name: get
+        method: GET
+        description: List all annotations
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: post
+        method: POST
+        description: Create annotation
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+    - name: annotations-id
+      path: /annotations/{id}
+      operations:
+      - name: get
+        method: GET
+        description: Retrieve annotation
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: put
+        method: PUT
+        description: Update annotation
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+      - name: delete
+        method: DELETE
+        description: Delete annotation
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: dashboards
+      path: /dashboards
+      operations:
+      - name: get
+        method: GET
+        description: List all dashboards
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: post
+        method: POST
+        description: Create dashboard
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+    - name: dashboards-uid
+      path: /dashboards/{uid}
+      operations:
+      - name: get
+        method: GET
+        description: Retrieve dashboard
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: put
+        method: PUT
+        description: Update dashboard
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+      - name: delete
+        method: DELETE
+        description: Delete dashboard
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: datasets
+      path: /datasets
+      operations:
+      - name: get
+        method: GET
+        description: List all datasets
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: post
+        method: POST
+        description: Create dataset
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+    - name: datasets-dataset-ingest
+      path: /datasets/{dataset}/ingest
+      operations:
+      - name: post
+        method: POST
+        description: Ingest data to dataset
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+    - name: datasets-dataset-query
+      path: /datasets/{dataset}/query
+      operations:
+      - name: post
+        method: POST
+        description: Run query against dataset
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+    - name: datasets-id
+      path: /datasets/{id}
+      operations:
+      - name: get
+        method: GET
+        description: Retrieve dataset
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: put
+        method: PUT
+        description: Update dataset
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+      - name: delete
+        method: DELETE
+        description: Delete dataset
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: datasets-id-fields
+      path: /datasets/{id}/fields
+      operations:
+      - name: get
+        method: GET
+        description: List all fields in dataset
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: datasets-id-fields-name
+      path: /datasets/{id}/fields/{name}
+      operations:
+      - name: get
+        method: GET
+        description: Retrieve field in dataset
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: put
+        method: PUT
+        description: Update field
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+    - name: datasets-id-metrics
+      path: /datasets/{id}/metrics
+      operations:
+      - name: get
+        method: GET
+        description: Get metrics for dataset
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: datasets-id-metrics-tags
+      path: /datasets/{id}/metrics/tags
+      operations:
+      - name: get
+        method: GET
+        description: Get metric tags for dataset
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: datasets-id-metrics-tags-values
+      path: /datasets/{id}/metrics/tags/values
+      operations:
+      - name: get
+        method: GET
+        description: Get metric tag values for dataset
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: datasets-id-tags
+      path: /datasets/{id}/tags
+      operations:
+      - name: get
+        method: GET
+        description: Get tags for dataset
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: datasets-id-tags-values
+      path: /datasets/{id}/tags/values
+      operations:
+      - name: get
+        method: GET
+        description: Get tag values for dataset
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: datasets-id-trim
+      path: /datasets/{id}/trim
+      operations:
+      - name: post
+        method: POST
+        description: Trim dataset
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: datasets-id-vacuum
+      path: /datasets/{id}/vacuum
+      operations:
+      - name: post
+        method: POST
+        description: Vacuum dataset
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: groups
+      path: /groups
+      operations:
+      - name: get
+        method: GET
+        description: List all groups
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: post
+        method: POST
+        description: Create group
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: groups-id
+      path: /groups/{id}
+      operations:
+      - name: get
+        method: GET
+        description: Retrieve group
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: put
+        method: PUT
+        description: Update group
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: delete
+        method: DELETE
+        description: Delete group
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: mapfields
+      path: /mapfields
+      operations:
+      - name: get
+        method: GET
+        description: List all map fields
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: post
+        method: POST
+        description: Create map field
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: put
+        method: PUT
+        description: Update list of map fields
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: delete
+        method: DELETE
+        description: Delete map fields
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: monitors
+      path: /monitors
+      operations:
+      - name: get
+        method: GET
+        description: List all monitors
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: post
+        method: POST
+        description: Create monitor
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: monitors-id
+      path: /monitors/{id}
+      operations:
+      - name: get
+        method: GET
+        description: Retrieve monitor
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: put
+        method: PUT
+        description: Update monitor
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: delete
+        method: DELETE
+        description: Delete monitor
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: monitors-id-history
+      path: /monitors/{id}/history
+      operations:
+      - name: get
+        method: GET
+        description: Retrieve monitor history
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: notifiers
+      path: /notifiers
+      operations:
+      - name: get
+        method: GET
+        description: List all notifiers
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: post
+        method: POST
+        description: Create notifier
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: notifiers-id
+      path: /notifiers/{id}
+      operations:
+      - name: get
+        method: GET
+        description: Retrieve notifier
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: put
+        method: PUT
+        description: Update notifier
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: delete
+        method: DELETE
+        description: Delete notifier
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: orgs
+      path: /orgs
+      operations:
+      - name: get
+        method: GET
+        description: List all orgs
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: post
+        method: POST
+        description: Create org
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: orgs-id
+      path: /orgs/{id}
+      operations:
+      - name: get
+        method: GET
+        description: Retrieve org
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: put
+        method: PUT
+        description: Update org
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: orgs-orgId-users-userId
+      path: /orgs/{orgId}/users/{userId}
+      operations:
+      - name: delete
+        method: DELETE
+        description: Delete user from org
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: roles
+      path: /roles
+      operations:
+      - name: get
+        method: GET
+        description: List all roles
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: post
+        method: POST
+        description: Create role
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: roles-id
+      path: /roles/{id}
+      operations:
+      - name: get
+        method: GET
+        description: Retrieve role
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: put
+        method: PUT
+        description: Update role
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: delete
+        method: DELETE
+        description: Delete role
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: starred
+      path: /starred
+      operations:
+      - name: get
+        method: GET
+        description: List all saved queries
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: post
+        method: POST
+        description: Create saved query
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: starred-id
+      path: /starred/{id}
+      operations:
+      - name: get
+        method: GET
+        description: Retrieve saved query
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: put
+        method: PUT
+        description: Update saved query
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: delete
+        method: DELETE
+        description: Delete saved query
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: tokens
+      path: /tokens
+      operations:
+      - name: get
+        method: GET
+        description: List all API tokens
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: post
+        method: POST
+        description: Create API token
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: tokens-id
+      path: /tokens/{id}
+      operations:
+      - name: get
+        method: GET
+        description: Retrieve API token
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: put
+        method: PUT
+        description: Regenerate API token
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: delete
+        method: DELETE
+        description: Delete API token
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: users
+      path: /users
+      operations:
+      - name: get
+        method: GET
+        description: List all users
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: post
+        method: POST
+        description: Create user
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: users-current
+      path: /users/current
+      operations:
+      - name: get
+        method: GET
+        description: Retrieve current user
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: put
+        method: PUT
+        description: Update current user
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: users-id
+      path: /users/{id}
+      operations:
+      - name: get
+        method: GET
+        description: Retrieve user
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: users-id-role
+      path: /users/{id}/role
+      operations:
+      - name: put
+        method: PUT
+        description: Update user role
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: v1-datasets-dataset-ingest
+      path: /v1/datasets/{dataset}/ingest
+      operations:
+      - name: post
+        method: POST
+        description: Ingest data to edge deployment
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: v1-datasets-dataset-query
+      path: /v1/datasets/{dataset}/query
+      operations:
+      - name: post
+        method: POST
+        description: Run legacy query
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: v1-edge-metrics
+      path: /v1/edge/metrics
+      operations:
+      - name: post
+        method: POST
+        description: Run MPL query to edge deployment
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: v1-edge-query
+      path: /v1/edge/query
+      operations:
+      - name: post
+        method: POST
+        description: Run APL query to edge deployment
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: v1-edge-query-batch
+      path: /v1/edge/query/batch
+      operations:
+      - name: post
+        method: POST
+        description: Run batch query to edge deployment
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: views
+      path: /views
+      operations:
+      - name: get
+        method: GET
+        description: List all views
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: post
+        method: POST
+        description: Create view
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: views-id
+      path: /views/{id}
+      operations:
+      - name: get
+        method: GET
+        description: Retrieve view
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: put
+        method: PUT
+        description: Update view
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: delete
+        method: DELETE
+        description: Delete view
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: virtualfields
+      path: /virtualfields
+      operations:
+      - name: get
+        method: GET
+        description: List all virtual fields
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: post
+        method: POST
+        description: Create virtual field
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: virtualfields-id
+      path: /virtualfields/{id}
+      operations:
+      - name: get
+        method: GET
+        description: Retrieve virtual field
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: put
+        method: PUT
+        description: Update virtual field
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: delete
+        method: DELETE
+        description: Delete virtual field
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+  exposes:
+  - type: rest
+    namespace: axiom-rest
+    port: 8080
+    description: REST adapter for Axiom REST API. One Spectral-compliant resource per consumed operation, prefixed with /v1.
+    resources:
+    - path: /v1/annotations
+      name: annotations
+      description: REST surface for annotations.
+      operations:
+      - method: GET
+        name: get
+        description: List all annotations
+        call: axiom.get
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: POST
+        name: post
+        description: Create annotation
+        call: axiom.post
+        with:
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/annotations/{id}
+      name: annotations-id
+      description: REST surface for annotations-id.
+      operations:
+      - method: GET
+        name: get
+        description: Retrieve annotation
+        call: axiom.get
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: PUT
+        name: put
+        description: Update annotation
+        call: axiom.put
+        with:
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: DELETE
+        name: delete
+        description: Delete annotation
+        call: axiom.delete
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/dashboards
+      name: dashboards
+      description: REST surface for dashboards.
+      operations:
+      - method: GET
+        name: get
+        description: List all dashboards
+        call: axiom.get
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: POST
+        name: post
+        description: Create dashboard
+        call: axiom.post
+        with:
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/dashboards/{uid}
+      name: dashboards-uid
+      description: REST surface for dashboards-uid.
+      operations:
+      - method: GET
+        name: get
+        description: Retrieve dashboard
+        call: axiom.get
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: PUT
+        name: put
+        description: Update dashboard
+        call: axiom.put
+        with:
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: DELETE
+        name: delete
+        description: Delete dashboard
+        call: axiom.delete
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/datasets
+      name: datasets
+      description: REST surface for datasets.
+      operations:
+      - method: GET
+        name: get
+        description: List all datasets
+        call: axiom.get
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: POST
+        name: post
+        description: Create dataset
+        call: axiom.post
+        with:
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/datasets/{dataset}/ingest
+      name: datasets-dataset-ingest
+      description: REST surface for datasets-dataset-ingest.
+      operations:
+      - method: POST
+        name: post
+        description: Ingest data to dataset
+        call: axiom.post
+        with:
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/datasets/{dataset}/query
+      name: datasets-dataset-query
+      description: REST surface for datasets-dataset-query.
+      operations:
+      - method: POST
+        name: post
+        description: Run query against dataset
+        call: axiom.post
+        with:
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/datasets/{id}
+      name: datasets-id
+      description: REST surface for datasets-id.
+      operations:
+      - method: GET
+        name: get
+        description: Retrieve dataset
+        call: axiom.get
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: PUT
+        name: put
+        description: Update dataset
+        call: axiom.put
+        with:
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: DELETE
+        name: delete
+        description: Delete dataset
+        call: axiom.delete
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/datasets/{id}/fields
+      name: datasets-id-fields
+      description: REST surface for datasets-id-fields.
+      operations:
+      - method: GET
+        name: get
+        description: List all fields in dataset
+        call: axiom.get
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/datasets/{id}/fields/{name}
+      name: datasets-id-fields-name
+      description: REST surface for datasets-id-fields-name.
+      operations:
+      - method: GET
+        name: get
+        description: Retrieve field in dataset
+        call: axiom.get
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: PUT
+        name: put
+        description: Update field
+        call: axiom.put
+        with:
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/datasets/{id}/metrics
+      name: datasets-id-metrics
+      description: REST surface for datasets-id-metrics.
+      operations:
+      - method: GET
+        name: get
+        description: Get metrics for dataset
+        call: axiom.get
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/datasets/{id}/metrics/tags
+      name: datasets-id-metrics-tags
+      description: REST surface for datasets-id-metrics-tags.
+      operations:
+      - method: GET
+        name: get
+        description: Get metric tags for dataset
+        call: axiom.get
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/datasets/{id}/metrics/tags/values
+      name: datasets-id-metrics-tags-values
+      description: REST surface for datasets-id-metrics-tags-values.
+      operations:
+      - method: GET
+        name: get
+        description: Get metric tag values for dataset
+        call: axiom.get
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/datasets/{id}/tags
+      name: datasets-id-tags
+      description: REST surface for datasets-id-tags.
+      operations:
+      - method: GET
+        name: get
+        description: Get tags for dataset
+        call: axiom.get
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/datasets/{id}/tags/values
+      name: datasets-id-tags-values
+      description: REST surface for datasets-id-tags-values.
+      operations:
+      - method: GET
+        name: get
+        description: Get tag values for dataset
+        call: axiom.get
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/datasets/{id}/trim
+      name: datasets-id-trim
+      description: REST surface for datasets-id-trim.
+      operations:
+      - method: POST
+        name: post
+        description: Trim dataset
+        call: axiom.post
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/datasets/{id}/vacuum
+      name: datasets-id-vacuum
+      description: REST surface for datasets-id-vacuum.
+      operations:
+      - method: POST
+        name: post
+        description: Vacuum dataset
+        call: axiom.post
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/groups
+      name: groups
+      description: REST surface for groups.
+      operations:
+      - method: GET
+        name: get
+        description: List all groups
+        call: axiom.get
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: POST
+        name: post
+        description: Create group
+        call: axiom.post
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/groups/{id}
+      name: groups-id
+      description: REST surface for groups-id.
+      operations:
+      - method: GET
+        name: get
+        description: Retrieve group
+        call: axiom.get
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: PUT
+        name: put
+        description: Update group
+        call: axiom.put
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: DELETE
+        name: delete
+        description: Delete group
+        call: axiom.delete
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/mapfields
+      name: mapfields
+      description: REST surface for mapfields.
+      operations:
+      - method: GET
+        name: get
+        description: List all map fields
+        call: axiom.get
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: POST
+        name: post
+        description: Create map field
+        call: axiom.post
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: PUT
+        name: put
+        description: Update list of map fields
+        call: axiom.put
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: DELETE
+        name: delete
+        description: Delete map fields
+        call: axiom.delete
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/monitors
+      name: monitors
+      description: REST surface for monitors.
+      operations:
+      - method: GET
+        name: get
+        description: List all monitors
+        call: axiom.get
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: POST
+        name: post
+        description: Create monitor
+        call: axiom.post
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/monitors/{id}
+      name: monitors-id
+      description: REST surface for monitors-id.
+      operations:
+      - method: GET
+        name: get
+        description: Retrieve monitor
+        call: axiom.get
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: PUT
+        name: put
+        description: Update monitor
+        call: axiom.put
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: DELETE
+        name: delete
+        description: Delete monitor
+        call: axiom.delete
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/monitors/{id}/history
+      name: monitors-id-history
+      description: REST surface for monitors-id-history.
+      operations:
+      - method: GET
+        name: get
+        description: Retrieve monitor history
+        call: axiom.get
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/notifiers
+      name: notifiers
+      description: REST surface for notifiers.
+      operations:
+      - method: GET
+        name: get
+        description: List all notifiers
+        call: axiom.get
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: POST
+        name: post
+        description: Create notifier
+        call: axiom.post
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/notifiers/{id}
+      name: notifiers-id
+      description: REST surface for notifiers-id.
+      operations:
+      - method: GET
+        name: get
+        description: Retrieve notifier
+        call: axiom.get
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: PUT
+        name: put
+        description: Update notifier
+        call: axiom.put
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: DELETE
+        name: delete
+        description: Delete notifier
+        call: axiom.delete
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/orgs
+      name: orgs
+      description: REST surface for orgs.
+      operations:
+      - method: GET
+        name: get
+        description: List all orgs
+        call: axiom.get
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: POST
+        name: post
+        description: Create org
+        call: axiom.post
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/orgs/{id}
+      name: orgs-id
+      description: REST surface for orgs-id.
+      operations:
+      - method: GET
+        name: get
+        description: Retrieve org
+        call: axiom.get
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: PUT
+        name: put
+        description: Update org
+        call: axiom.put
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/orgs/{orgid}/users/{userid}
+      name: orgs-orgid-users-userid
+      description: REST surface for orgs-orgId-users-userId.
+      operations:
+      - method: DELETE
+        name: delete
+        description: Delete user from org
+        call: axiom.delete
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/roles
+      name: roles
+      description: REST surface for roles.
+      operations:
+      - method: GET
+        name: get
+        description: List all roles
+        call: axiom.get
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: POST
+        name: post
+        description: Create role
+        call: axiom.post
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/roles/{id}
+      name: roles-id
+      description: REST surface for roles-id.
+      operations:
+      - method: GET
+        name: get
+        description: Retrieve role
+        call: axiom.get
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: PUT
+        name: put
+        description: Update role
+        call: axiom.put
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: DELETE
+        name: delete
+        description: Delete role
+        call: axiom.delete
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/starred
+      name: starred
+      description: REST surface for starred.
+      operations:
+      - method: GET
+        name: get
+        description: List all saved queries
+        call: axiom.get
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: POST
+        name: post
+        description: Create saved query
+        call: axiom.post
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/starred/{id}
+      name: starred-id
+      description: REST surface for starred-id.
+      operations:
+      - method: GET
+        name: get
+        description: Retrieve saved query
+        call: axiom.get
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: PUT
+        name: put
+        description: Update saved query
+        call: axiom.put
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: DELETE
+        name: delete
+        description: Delete saved query
+        call: axiom.delete
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/tokens
+      name: tokens
+      description: REST surface for tokens.
+      operations:
+      - method: GET
+        name: get
+        description: List all API tokens
+        call: axiom.get
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: POST
+        name: post
+        description: Create API token
+        call: axiom.post
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/tokens/{id}
+      name: tokens-id
+      description: REST surface for tokens-id.
+      operations:
+      - method: GET
+        name: get
+        description: Retrieve API token
+        call: axiom.get
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: PUT
+        name: put
+        description: Regenerate API token
+        call: axiom.put
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: DELETE
+        name: delete
+        description: Delete API token
+        call: axiom.delete
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/users
+      name: users
+      description: REST surface for users.
+      operations:
+      - method: GET
+        name: get
+        description: List all users
+        call: axiom.get
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: POST
+        name: post
+        description: Create user
+        call: axiom.post
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/users/current
+      name: users-current
+      description: REST surface for users-current.
+      operations:
+      - method: GET
+        name: get
+        description: Retrieve current user
+        call: axiom.get
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: PUT
+        name: put
+        description: Update current user
+        call: axiom.put
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/users/{id}
+      name: users-id
+      description: REST surface for users-id.
+      operations:
+      - method: GET
+        name: get
+        description: Retrieve user
+        call: axiom.get
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/users/{id}/role
+      name: users-id-role
+      description: REST surface for users-id-role.
+      operations:
+      - method: PUT
+        name: put
+        description: Update user role
+        call: axiom.put
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/v1/datasets/{dataset}/ingest
+      name: v1-datasets-dataset-ingest
+      description: REST surface for v1-datasets-dataset-ingest.
+      operations:
+      - method: POST
+        name: post
+        description: Ingest data to edge deployment
+        call: axiom.post
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/v1/datasets/{dataset}/query
+      name: v1-datasets-dataset-query
+      description: REST surface for v1-datasets-dataset-query.
+      operations:
+      - method: POST
+        name: post
+        description: Run legacy query
+        call: axiom.post
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/v1/edge/metrics
+      name: v1-edge-metrics
+      description: REST surface for v1-edge-metrics.
+      operations:
+      - method: POST
+        name: post
+        description: Run MPL query to edge deployment
+        call: axiom.post
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/v1/edge/query
+      name: v1-edge-query
+      description: REST surface for v1-edge-query.
+      operations:
+      - method: POST
+        name: post
+        description: Run APL query to edge deployment
+        call: axiom.post
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/v1/edge/query/batch
+      name: v1-edge-query-batch
+      description: REST surface for v1-edge-query-batch.
+      operations:
+      - method: POST
+        name: post
+        description: Run batch query to edge deployment
+        call: axiom.post
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/views
+      name: views
+      description: REST surface for views.
+      operations:
+      - method: GET
+        name: get
+        description: List all views
+        call: axiom.get
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: POST
+        name: post
+        description: Create view
+        call: axiom.post
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/views/{id}
+      name: views-id
+      description: REST surface for views-id.
+      operations:
+      - method: GET
+        name: get
+        description: Retrieve view
+        call: axiom.get
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: PUT
+        name: put
+        description: Update view
+        call: axiom.put
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: DELETE
+        name: delete
+        description: Delete view
+        call: axiom.delete
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/virtualfields
+      name: virtualfields
+      description: REST surface for virtualfields.
+      operations:
+      - method: GET
+        name: get
+        description: List all virtual fields
+        call: axiom.get
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: POST
+        name: post
+        description: Create virtual field
+        call: axiom.post
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/virtualfields/{id}
+      name: virtualfields-id
+      description: REST surface for virtualfields-id.
+      operations:
+      - method: GET
+        name: get
+        description: Retrieve virtual field
+        call: axiom.get
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: PUT
+        name: put
+        description: Update virtual field
+        call: axiom.put
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: DELETE
+        name: delete
+        description: Delete virtual field
+        call: axiom.delete
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    namespace: axiom-mcp
+    port: 9090
+    transport: http
+    description: MCP adapter for Axiom REST API. One tool per consumed operation, routed inline through this capability's
+      consumes block.
+    tools:
+    - name: list-all-annotations
+      description: List all annotations
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: axiom.get
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: create-annotation
+      description: Create annotation
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: axiom.post
+      with:
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: retrieve-annotation
+      description: Retrieve annotation
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: axiom.get
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: update-annotation
+      description: Update annotation
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: true
+      call: axiom.put
+      with:
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: delete-annotation
+      description: Delete annotation
+      hints:
+        readOnly: false
+        destructive: true
+        idempotent: true
+      call: axiom.delete
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: list-all-dashboards
+      description: List all dashboards
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: axiom.get
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: create-dashboard
+      description: Create dashboard
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: axiom.post
+      with:
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: retrieve-dashboard
+      description: Retrieve dashboard
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: axiom.get
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: update-dashboard
+      description: Update dashboard
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: true
+      call: axiom.put
+      with:
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: delete-dashboard
+      description: Delete dashboard
+      hints:
+        readOnly: false
+        destructive: true
+        idempotent: true
+      call: axiom.delete
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: list-all-datasets
+      description: List all datasets
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: axiom.get
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: create-dataset
+      description: Create dataset
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: axiom.post
+      with:
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: ingest-data-dataset
+      description: Ingest data to dataset
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: axiom.post
+      with:
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: run-query-against-dataset
+      description: Run query against dataset
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: false
+      call: axiom.post
+      with:
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: retrieve-dataset
+      description: Retrieve dataset
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: axiom.get
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: update-dataset
+      description: Update dataset
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: true
+      call: axiom.put
+      with:
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: delete-dataset
+      description: Delete dataset
+      hints:
+        readOnly: false
+        destructive: true
+        idempotent: true
+      call: axiom.delete
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: list-all-fields-dataset
+      description: List all fields in dataset
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: axiom.get
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: retrieve-field-dataset
+      description: Retrieve field in dataset
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: axiom.get
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: update-field
+      description: Update field
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: true
+      call: axiom.put
+      with:
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: get-metrics-dataset
+      description: Get metrics for dataset
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: axiom.get
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: get-metric-tags-dataset
+      description: Get metric tags for dataset
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: axiom.get
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: get-metric-tag-values-dataset
+      description: Get metric tag values for dataset
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: axiom.get
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: get-tags-dataset
+      description: Get tags for dataset
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: axiom.get
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: get-tag-values-dataset
+      description: Get tag values for dataset
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: axiom.get
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: trim-dataset
+      description: Trim dataset
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: axiom.post
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: vacuum-dataset
+      description: Vacuum dataset
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: axiom.post
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: list-all-groups
+      description: List all groups
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: axiom.get
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: create-group
+      description: Create group
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: axiom.post
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: retrieve-group
+      description: Retrieve group
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: axiom.get
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: update-group
+      description: Update group
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: true
+      call: axiom.put
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: delete-group
+      description: Delete group
+      hints:
+        readOnly: false
+        destructive: true
+        idempotent: true
+      call: axiom.delete
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: list-all-map-fields
+      description: List all map fields
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: axiom.get
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: create-map-field
+      description: Create map field
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: axiom.post
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: update-list-map-fields
+      description: Update list of map fields
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: true
+      call: axiom.put
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: delete-map-fields
+      description: Delete map fields
+      hints:
+        readOnly: false
+        destructive: true
+        idempotent: true
+      call: axiom.delete
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: list-all-monitors
+      description: List all monitors
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: axiom.get
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: create-monitor
+      description: Create monitor
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: axiom.post
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: retrieve-monitor
+      description: Retrieve monitor
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: axiom.get
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: update-monitor
+      description: Update monitor
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: true
+      call: axiom.put
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: delete-monitor
+      description: Delete monitor
+      hints:
+        readOnly: false
+        destructive: true
+        idempotent: true
+      call: axiom.delete
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: retrieve-monitor-history
+      description: Retrieve monitor history
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: axiom.get
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: list-all-notifiers
+      description: List all notifiers
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: axiom.get
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: create-notifier
+      description: Create notifier
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: axiom.post
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: retrieve-notifier
+      description: Retrieve notifier
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: axiom.get
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: update-notifier
+      description: Update notifier
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: true
+      call: axiom.put
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: delete-notifier
+      description: Delete notifier
+      hints:
+        readOnly: false
+        destructive: true
+        idempotent: true
+      call: axiom.delete
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: list-all-orgs
+      description: List all orgs
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: axiom.get
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: create-org
+      description: Create org
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: axiom.post
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: retrieve-org
+      description: Retrieve org
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: axiom.get
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: update-org
+      description: Update org
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: true
+      call: axiom.put
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: delete-user-org
+      description: Delete user from org
+      hints:
+        readOnly: false
+        destructive: true
+        idempotent: true
+      call: axiom.delete
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: list-all-roles
+      description: List all roles
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: axiom.get
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: create-role
+      description: Create role
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: axiom.post
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: retrieve-role
+      description: Retrieve role
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: axiom.get
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: update-role
+      description: Update role
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: true
+      call: axiom.put
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: delete-role
+      description: Delete role
+      hints:
+        readOnly: false
+        destructive: true
+        idempotent: true
+      call: axiom.delete
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: list-all-saved-queries
+      description: List all saved queries
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: axiom.get
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: create-saved-query
+      description: Create saved query
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: false
+      call: axiom.post
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: retrieve-saved-query
+      description: Retrieve saved query
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: axiom.get
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: update-saved-query
+      description: Update saved query
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: true
+      call: axiom.put
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: delete-saved-query
+      description: Delete saved query
+      hints:
+        readOnly: false
+        destructive: true
+        idempotent: true
+      call: axiom.delete
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: list-all-api-tokens
+      description: List all API tokens
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: axiom.get
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: create-api-token
+      description: Create API token
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: axiom.post
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: retrieve-api-token
+      description: Retrieve API token
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: axiom.get
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: regenerate-api-token
+      description: Regenerate API token
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: true
+      call: axiom.put
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: delete-api-token
+      description: Delete API token
+      hints:
+        readOnly: false
+        destructive: true
+        idempotent: true
+      call: axiom.delete
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: list-all-users
+      description: List all users
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: axiom.get
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: create-user
+      description: Create user
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: axiom.post
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: retrieve-current-user
+      description: Retrieve current user
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: axiom.get
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: update-current-user
+      description: Update current user
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: true
+      call: axiom.put
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: retrieve-user
+      description: Retrieve user
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: axiom.get
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: update-user-role
+      description: Update user role
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: true
+      call: axiom.put
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: ingest-data-edge-deployment
+      description: Ingest data to edge deployment
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: axiom.post
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: run-legacy-query
+      description: Run legacy query
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: false
+      call: axiom.post
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: run-mpl-query-edge-deployment
+      description: Run MPL query to edge deployment
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: false
+      call: axiom.post
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: run-apl-query-edge-deployment
+      description: Run APL query to edge deployment
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: false
+      call: axiom.post
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: run-batch-query-edge-deployment
+      description: Run batch query to edge deployment
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: false
+      call: axiom.post
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: list-all-views
+      description: List all views
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: axiom.get
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: create-view
+      description: Create view
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: axiom.post
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: retrieve-view
+      description: Retrieve view
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: axiom.get
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: update-view
+      description: Update view
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: true
+      call: axiom.put
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: delete-view
+      description: Delete view
+      hints:
+        readOnly: false
+        destructive: true
+        idempotent: true
+      call: axiom.delete
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: list-all-virtual-fields
+      description: List all virtual fields
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: axiom.get
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: create-virtual-field
+      description: Create virtual field
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: axiom.post
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: retrieve-virtual-field
+      description: Retrieve virtual field
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: axiom.get
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: update-virtual-field
+      description: Update virtual field
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: true
+      call: axiom.put
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: delete-virtual-field
+      description: Delete virtual field
+      hints:
+        readOnly: false
+        destructive: true
+        idempotent: true
+      call: axiom.delete
+      outputParameters:
+      - type: object
+        mapping: $.
