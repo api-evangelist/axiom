@@ -2,12 +2,20 @@
   "repo": "axiom",
   "feeds": [
     {
-      "source": "https://axiom.co/blog",
+      "source": "https://axiom.co/blog/feed.xml",
       "feed_url": "https://axiom.co/blog/feed.xml",
-      "title": "Axiom Blog",
-      "saved": 46
+      "title": "",
+      "saved": 0,
+      "method": "feed"
+    },
+    {
+      "source": "https://status.axiom.co",
+      "feed_url": "https://status.axiom.co/feed.rss",
+      "title": "",
+      "saved": 0,
+      "method": "discovered"
     }
   ],
   "post_count": 56,
-  "fetched": "2026-05-17T20:20:35Z"
+  "fetched": "2026-06-01T23:35:02Z"
 }
