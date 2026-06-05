@@ -1,44 +1,70 @@
-# Axiom
+# Axiom (axiom)
 
 Axiom is a serverless log management and analytics platform that provides real-time insights into structured and unstructured data with fast querying capabilities for logs, events, and telemetry data.
+
+**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/axiom/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/axiom/refs/heads/main/apis.yml)
+
+## Scope
+
+- **Type:** Index
+
+## Tags
+
+- Analytics
+- Log Management
+- Logging
+- Observability
+- Real-Time
+- Serverless
+
+## Timestamps
+
+- **Created:** 2024-01-15
+- **Modified:** 2026-05-29
 
 ## APIs
 
 ### Axiom API
+
 RESTful API for ingesting, querying, and managing logs and events in Axiom.
-- **Documentation**: https://axiom.co/docs/restapi/introduction
-- **Authentication**: https://axiom.co/docs/restapi/token
 
-## Features
+- **Human URL:** [https://axiom.co/docs/restapi/introduction](https://axiom.co/docs/restapi/introduction)
+- **Base URL:** `https://api.axiom.co`
 
-- **Serverless Log Management** — Manage logs without managing servers or storage infrastructure.
-- **Real-Time Querying** — Query billions of events in seconds with APL (Axiom Processing Language).
-- **Dataset Organization** — Organize data into datasets with role-based access control.
-- **Monitors and Alerts** — Create monitors with notifications to Slack, PagerDuty, and email.
-- **OpenTelemetry Native** — Native OTLP ingestion for logs, metrics, and traces.
-- **Endless Retention** — Store data indefinitely with query-optimized cold storage.
-- **Dashboards** — Build and share monitoring dashboards with rich visualization options.
-- **Annotations** — Mark events like deployments on dashboards for correlation analysis.
+#### Tags
 
-## Use Cases
+- Analytics
+- Logging
+- Observability
 
-- **Application Logging** — Centralize application logs for debugging and error analysis.
-- **DevOps Observability** — Monitor CI/CD pipelines, deployments, and infrastructure health.
-- **Security Analytics** — Analyze audit logs and detect security anomalies.
-- **Edge Function Monitoring** — Monitor Vercel, Cloudflare, and other edge function execution.
-- **Distributed Tracing** — Trace requests across services using OpenTelemetry OTLP.
+#### Properties
 
-## Links
+- [Documentation](https://axiom.co/docs/restapi/introduction)
+- [Authentication](https://axiom.co/docs/restapi/token)
+- [OpenAPI](openapi/axiom-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
+- [Postman Collection](collections/axiom.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
+- [Open Collection](collections/axiom.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+- [AsyncAPI](asyncapi/axiom-custom-webhook-asyncapi.yml) — [AsyncAPI Specification](https://www.asyncapi.com/docs/reference/specification/latest)
 
-- **Portal**: https://axiom.co/
-- **Documentation**: https://axiom.co/docs
-- **Getting Started**: https://axiom.co/docs/get-started
-- **Pricing**: https://axiom.co/pricing
-- **Blog**: https://axiom.co/blog
-- **GitHub**: https://github.com/axiomhq
-- **Status**: https://status.axiom.co
-- **Sign Up**: https://app.axiom.co/register
+## Common Properties
+
+- [LinkedIn](https://www.linkedin.com/company/axiomhq)
+- [Portal](https://axiom.co/)
+- [Status Page](https://status.axiom.co)
+- [Blog](https://axiom.co/blog)
+- [GitHub Organization](https://github.com/axiomhq)
+- [Terms of Service](https://axiom.co/terms)
+- [Privacy Policy](https://axiom.co/privacy)
+- [Sign Up](https://app.axiom.co/register)
+- [Pricing](https://axiom.co/pricing)
+- [Documentation](https://axiom.co/docs)
+- [Getting Started](https://axiom.co/docs/get-started)
+- [Features](undefined)
+- [Use Cases](undefined)
+- [Integrations](undefined)
+- [M C P Server](https://github.com/axiomhq/mcp-server-axiom)
 
 ## Maintainers
 
-- **Kin Lane** — kin@apievangelist.com
+**FN:** Kin Lane
+**Email:** kin@apievangelist.com
