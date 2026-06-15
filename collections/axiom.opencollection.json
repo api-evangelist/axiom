@@ -1,0 +1,1400 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Axiom REST API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "List all annotations",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://api.axiom.co/annotations"
+      },
+      "docs": "List all annotations"
+    },
+    {
+      "info": {
+        "name": "Create annotation",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "https://api.axiom.co/annotations",
+        "body": {
+          "type": "json",
+          "data": "{}"
+        }
+      },
+      "docs": "Create annotation"
+    },
+    {
+      "info": {
+        "name": "Retrieve annotation",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://api.axiom.co/annotations/:id",
+        "params": [
+          {
+            "name": "id",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Retrieve annotation"
+    },
+    {
+      "info": {
+        "name": "Update annotation",
+        "type": "http"
+      },
+      "http": {
+        "method": "PUT",
+        "url": "https://api.axiom.co/annotations/:id",
+        "params": [
+          {
+            "name": "id",
+            "value": "",
+            "type": "path"
+          }
+        ],
+        "body": {
+          "type": "json",
+          "data": "{}"
+        }
+      },
+      "docs": "Update annotation"
+    },
+    {
+      "info": {
+        "name": "Delete annotation",
+        "type": "http"
+      },
+      "http": {
+        "method": "DELETE",
+        "url": "https://api.axiom.co/annotations/:id",
+        "params": [
+          {
+            "name": "id",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Delete annotation"
+    },
+    {
+      "info": {
+        "name": "List all dashboards",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://api.axiom.co/dashboards"
+      },
+      "docs": "List all dashboards"
+    },
+    {
+      "info": {
+        "name": "Create dashboard",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "https://api.axiom.co/dashboards",
+        "body": {
+          "type": "json",
+          "data": "{}"
+        }
+      },
+      "docs": "Create dashboard"
+    },
+    {
+      "info": {
+        "name": "Retrieve dashboard",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://api.axiom.co/dashboards/:uid",
+        "params": [
+          {
+            "name": "uid",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Retrieve dashboard"
+    },
+    {
+      "info": {
+        "name": "Update dashboard",
+        "type": "http"
+      },
+      "http": {
+        "method": "PUT",
+        "url": "https://api.axiom.co/dashboards/:uid",
+        "params": [
+          {
+            "name": "uid",
+            "value": "",
+            "type": "path"
+          }
+        ],
+        "body": {
+          "type": "json",
+          "data": "{}"
+        }
+      },
+      "docs": "Update dashboard"
+    },
+    {
+      "info": {
+        "name": "Delete dashboard",
+        "type": "http"
+      },
+      "http": {
+        "method": "DELETE",
+        "url": "https://api.axiom.co/dashboards/:uid",
+        "params": [
+          {
+            "name": "uid",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Delete dashboard"
+    },
+    {
+      "info": {
+        "name": "List all datasets",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://api.axiom.co/datasets"
+      },
+      "docs": "List all datasets"
+    },
+    {
+      "info": {
+        "name": "Create dataset",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "https://api.axiom.co/datasets",
+        "body": {
+          "type": "json",
+          "data": "{}"
+        }
+      },
+      "docs": "Create dataset"
+    },
+    {
+      "info": {
+        "name": "Retrieve dataset",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://api.axiom.co/datasets/:id",
+        "params": [
+          {
+            "name": "id",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Retrieve dataset"
+    },
+    {
+      "info": {
+        "name": "Update dataset",
+        "type": "http"
+      },
+      "http": {
+        "method": "PUT",
+        "url": "https://api.axiom.co/datasets/:id",
+        "params": [
+          {
+            "name": "id",
+            "value": "",
+            "type": "path"
+          }
+        ],
+        "body": {
+          "type": "json",
+          "data": "{}"
+        }
+      },
+      "docs": "Update dataset"
+    },
+    {
+      "info": {
+        "name": "Delete dataset",
+        "type": "http"
+      },
+      "http": {
+        "method": "DELETE",
+        "url": "https://api.axiom.co/datasets/:id",
+        "params": [
+          {
+            "name": "id",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Delete dataset"
+    },
+    {
+      "info": {
+        "name": "List all fields in dataset",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://api.axiom.co/datasets/:id/fields",
+        "params": [
+          {
+            "name": "id",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "List all fields in dataset"
+    },
+    {
+      "info": {
+        "name": "Retrieve field in dataset",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://api.axiom.co/datasets/:id/fields/:name",
+        "params": [
+          {
+            "name": "id",
+            "value": "",
+            "type": "path"
+          },
+          {
+            "name": "name",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Retrieve field in dataset"
+    },
+    {
+      "info": {
+        "name": "Update field",
+        "type": "http"
+      },
+      "http": {
+        "method": "PUT",
+        "url": "https://api.axiom.co/datasets/:id/fields/:name",
+        "params": [
+          {
+            "name": "id",
+            "value": "",
+            "type": "path"
+          },
+          {
+            "name": "name",
+            "value": "",
+            "type": "path"
+          }
+        ],
+        "body": {
+          "type": "json",
+          "data": "{}"
+        }
+      },
+      "docs": "Update field"
+    },
+    {
+      "info": {
+        "name": "Get tags for dataset",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://api.axiom.co/datasets/:id/tags",
+        "params": [
+          {
+            "name": "id",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Get tags for dataset"
+    },
+    {
+      "info": {
+        "name": "Get tag values for dataset",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://api.axiom.co/datasets/:id/tags/values",
+        "params": [
+          {
+            "name": "id",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Get tag values for dataset"
+    },
+    {
+      "info": {
+        "name": "Get metrics for dataset",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://api.axiom.co/datasets/:id/metrics",
+        "params": [
+          {
+            "name": "id",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Get metrics for dataset"
+    },
+    {
+      "info": {
+        "name": "Get metric tags for dataset",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://api.axiom.co/datasets/:id/metrics/tags",
+        "params": [
+          {
+            "name": "id",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Get metric tags for dataset"
+    },
+    {
+      "info": {
+        "name": "Get metric tag values for dataset",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://api.axiom.co/datasets/:id/metrics/tags/values",
+        "params": [
+          {
+            "name": "id",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Get metric tag values for dataset"
+    },
+    {
+      "info": {
+        "name": "Trim dataset",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "https://api.axiom.co/datasets/:id/trim",
+        "params": [
+          {
+            "name": "id",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Trim dataset"
+    },
+    {
+      "info": {
+        "name": "Vacuum dataset",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "https://api.axiom.co/datasets/:id/vacuum",
+        "params": [
+          {
+            "name": "id",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Vacuum dataset"
+    },
+    {
+      "info": {
+        "name": "Ingest data to dataset",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "https://api.axiom.co/datasets/:dataset/ingest",
+        "params": [
+          {
+            "name": "dataset",
+            "value": "",
+            "type": "path"
+          }
+        ],
+        "body": {
+          "type": "json",
+          "data": "{}"
+        }
+      },
+      "docs": "Ingest data to dataset"
+    },
+    {
+      "info": {
+        "name": "Run query against dataset",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "https://api.axiom.co/datasets/:dataset/query",
+        "params": [
+          {
+            "name": "dataset",
+            "value": "",
+            "type": "path"
+          }
+        ],
+        "body": {
+          "type": "json",
+          "data": "{}"
+        }
+      },
+      "docs": "Run query against dataset"
+    },
+    {
+      "info": {
+        "name": "Ingest data to edge deployment",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "https://api.axiom.co/v1/datasets/:dataset/ingest",
+        "params": [
+          {
+            "name": "dataset",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Ingest data to edge deployment"
+    },
+    {
+      "info": {
+        "name": "Run legacy query",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "https://api.axiom.co/v1/datasets/:dataset/query",
+        "params": [
+          {
+            "name": "dataset",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Run legacy query"
+    },
+    {
+      "info": {
+        "name": "Run APL query to edge deployment",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "https://api.axiom.co/v1/edge/query"
+      },
+      "docs": "Run APL query to edge deployment"
+    },
+    {
+      "info": {
+        "name": "Run batch query to edge deployment",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "https://api.axiom.co/v1/edge/query/batch"
+      },
+      "docs": "Run batch query to edge deployment"
+    },
+    {
+      "info": {
+        "name": "Run MPL query to edge deployment",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "https://api.axiom.co/v1/edge/metrics"
+      },
+      "docs": "Run MPL query to edge deployment"
+    },
+    {
+      "info": {
+        "name": "List all groups",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://api.axiom.co/groups"
+      },
+      "docs": "List all groups"
+    },
+    {
+      "info": {
+        "name": "Create group",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "https://api.axiom.co/groups"
+      },
+      "docs": "Create group"
+    },
+    {
+      "info": {
+        "name": "Retrieve group",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://api.axiom.co/groups/:id",
+        "params": [
+          {
+            "name": "id",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Retrieve group"
+    },
+    {
+      "info": {
+        "name": "Update group",
+        "type": "http"
+      },
+      "http": {
+        "method": "PUT",
+        "url": "https://api.axiom.co/groups/:id",
+        "params": [
+          {
+            "name": "id",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Update group"
+    },
+    {
+      "info": {
+        "name": "Delete group",
+        "type": "http"
+      },
+      "http": {
+        "method": "DELETE",
+        "url": "https://api.axiom.co/groups/:id",
+        "params": [
+          {
+            "name": "id",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Delete group"
+    },
+    {
+      "info": {
+        "name": "List all map fields",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://api.axiom.co/mapfields"
+      },
+      "docs": "List all map fields"
+    },
+    {
+      "info": {
+        "name": "Create map field",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "https://api.axiom.co/mapfields"
+      },
+      "docs": "Create map field"
+    },
+    {
+      "info": {
+        "name": "Update list of map fields",
+        "type": "http"
+      },
+      "http": {
+        "method": "PUT",
+        "url": "https://api.axiom.co/mapfields"
+      },
+      "docs": "Update list of map fields"
+    },
+    {
+      "info": {
+        "name": "Delete map fields",
+        "type": "http"
+      },
+      "http": {
+        "method": "DELETE",
+        "url": "https://api.axiom.co/mapfields"
+      },
+      "docs": "Delete map fields"
+    },
+    {
+      "info": {
+        "name": "List all monitors",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://api.axiom.co/monitors"
+      },
+      "docs": "List all monitors"
+    },
+    {
+      "info": {
+        "name": "Create monitor",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "https://api.axiom.co/monitors"
+      },
+      "docs": "Create monitor"
+    },
+    {
+      "info": {
+        "name": "Retrieve monitor",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://api.axiom.co/monitors/:id",
+        "params": [
+          {
+            "name": "id",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Retrieve monitor"
+    },
+    {
+      "info": {
+        "name": "Update monitor",
+        "type": "http"
+      },
+      "http": {
+        "method": "PUT",
+        "url": "https://api.axiom.co/monitors/:id",
+        "params": [
+          {
+            "name": "id",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Update monitor"
+    },
+    {
+      "info": {
+        "name": "Delete monitor",
+        "type": "http"
+      },
+      "http": {
+        "method": "DELETE",
+        "url": "https://api.axiom.co/monitors/:id",
+        "params": [
+          {
+            "name": "id",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Delete monitor"
+    },
+    {
+      "info": {
+        "name": "Retrieve monitor history",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://api.axiom.co/monitors/:id/history",
+        "params": [
+          {
+            "name": "id",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Retrieve monitor history"
+    },
+    {
+      "info": {
+        "name": "List all notifiers",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://api.axiom.co/notifiers"
+      },
+      "docs": "List all notifiers"
+    },
+    {
+      "info": {
+        "name": "Create notifier",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "https://api.axiom.co/notifiers"
+      },
+      "docs": "Create notifier"
+    },
+    {
+      "info": {
+        "name": "Retrieve notifier",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://api.axiom.co/notifiers/:id",
+        "params": [
+          {
+            "name": "id",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Retrieve notifier"
+    },
+    {
+      "info": {
+        "name": "Update notifier",
+        "type": "http"
+      },
+      "http": {
+        "method": "PUT",
+        "url": "https://api.axiom.co/notifiers/:id",
+        "params": [
+          {
+            "name": "id",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Update notifier"
+    },
+    {
+      "info": {
+        "name": "Delete notifier",
+        "type": "http"
+      },
+      "http": {
+        "method": "DELETE",
+        "url": "https://api.axiom.co/notifiers/:id",
+        "params": [
+          {
+            "name": "id",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Delete notifier"
+    },
+    {
+      "info": {
+        "name": "List all orgs",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://api.axiom.co/orgs"
+      },
+      "docs": "List all orgs"
+    },
+    {
+      "info": {
+        "name": "Create org",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "https://api.axiom.co/orgs"
+      },
+      "docs": "Create org"
+    },
+    {
+      "info": {
+        "name": "Retrieve org",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://api.axiom.co/orgs/:id",
+        "params": [
+          {
+            "name": "id",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Retrieve org"
+    },
+    {
+      "info": {
+        "name": "Update org",
+        "type": "http"
+      },
+      "http": {
+        "method": "PUT",
+        "url": "https://api.axiom.co/orgs/:id",
+        "params": [
+          {
+            "name": "id",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Update org"
+    },
+    {
+      "info": {
+        "name": "Delete user from org",
+        "type": "http"
+      },
+      "http": {
+        "method": "DELETE",
+        "url": "https://api.axiom.co/orgs/:orgId/users/:userId",
+        "params": [
+          {
+            "name": "orgId",
+            "value": "",
+            "type": "path"
+          },
+          {
+            "name": "userId",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Delete user from org"
+    },
+    {
+      "info": {
+        "name": "List all roles",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://api.axiom.co/roles"
+      },
+      "docs": "List all roles"
+    },
+    {
+      "info": {
+        "name": "Create role",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "https://api.axiom.co/roles"
+      },
+      "docs": "Create role"
+    },
+    {
+      "info": {
+        "name": "Retrieve role",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://api.axiom.co/roles/:id",
+        "params": [
+          {
+            "name": "id",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Retrieve role"
+    },
+    {
+      "info": {
+        "name": "Update role",
+        "type": "http"
+      },
+      "http": {
+        "method": "PUT",
+        "url": "https://api.axiom.co/roles/:id",
+        "params": [
+          {
+            "name": "id",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Update role"
+    },
+    {
+      "info": {
+        "name": "Delete role",
+        "type": "http"
+      },
+      "http": {
+        "method": "DELETE",
+        "url": "https://api.axiom.co/roles/:id",
+        "params": [
+          {
+            "name": "id",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Delete role"
+    },
+    {
+      "info": {
+        "name": "List all saved queries",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://api.axiom.co/starred"
+      },
+      "docs": "List all saved queries"
+    },
+    {
+      "info": {
+        "name": "Create saved query",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "https://api.axiom.co/starred"
+      },
+      "docs": "Create saved query"
+    },
+    {
+      "info": {
+        "name": "Retrieve saved query",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://api.axiom.co/starred/:id",
+        "params": [
+          {
+            "name": "id",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Retrieve saved query"
+    },
+    {
+      "info": {
+        "name": "Update saved query",
+        "type": "http"
+      },
+      "http": {
+        "method": "PUT",
+        "url": "https://api.axiom.co/starred/:id",
+        "params": [
+          {
+            "name": "id",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Update saved query"
+    },
+    {
+      "info": {
+        "name": "Delete saved query",
+        "type": "http"
+      },
+      "http": {
+        "method": "DELETE",
+        "url": "https://api.axiom.co/starred/:id",
+        "params": [
+          {
+            "name": "id",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Delete saved query"
+    },
+    {
+      "info": {
+        "name": "List all API tokens",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://api.axiom.co/tokens"
+      },
+      "docs": "List all API tokens"
+    },
+    {
+      "info": {
+        "name": "Create API token",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "https://api.axiom.co/tokens"
+      },
+      "docs": "Create API token"
+    },
+    {
+      "info": {
+        "name": "Retrieve API token",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://api.axiom.co/tokens/:id",
+        "params": [
+          {
+            "name": "id",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Retrieve API token"
+    },
+    {
+      "info": {
+        "name": "Regenerate API token",
+        "type": "http"
+      },
+      "http": {
+        "method": "PUT",
+        "url": "https://api.axiom.co/tokens/:id",
+        "params": [
+          {
+            "name": "id",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Regenerate API token"
+    },
+    {
+      "info": {
+        "name": "Delete API token",
+        "type": "http"
+      },
+      "http": {
+        "method": "DELETE",
+        "url": "https://api.axiom.co/tokens/:id",
+        "params": [
+          {
+            "name": "id",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Delete API token"
+    },
+    {
+      "info": {
+        "name": "List all users",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://api.axiom.co/users"
+      },
+      "docs": "List all users"
+    },
+    {
+      "info": {
+        "name": "Create user",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "https://api.axiom.co/users"
+      },
+      "docs": "Create user"
+    },
+    {
+      "info": {
+        "name": "Retrieve current user",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://api.axiom.co/users/current"
+      },
+      "docs": "Retrieve current user"
+    },
+    {
+      "info": {
+        "name": "Update current user",
+        "type": "http"
+      },
+      "http": {
+        "method": "PUT",
+        "url": "https://api.axiom.co/users/current"
+      },
+      "docs": "Update current user"
+    },
+    {
+      "info": {
+        "name": "Retrieve user",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://api.axiom.co/users/:id",
+        "params": [
+          {
+            "name": "id",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Retrieve user"
+    },
+    {
+      "info": {
+        "name": "Update user role",
+        "type": "http"
+      },
+      "http": {
+        "method": "PUT",
+        "url": "https://api.axiom.co/users/:id/role",
+        "params": [
+          {
+            "name": "id",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Update user role"
+    },
+    {
+      "info": {
+        "name": "List all views",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://api.axiom.co/views"
+      },
+      "docs": "List all views"
+    },
+    {
+      "info": {
+        "name": "Create view",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "https://api.axiom.co/views"
+      },
+      "docs": "Create view"
+    },
+    {
+      "info": {
+        "name": "Retrieve view",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://api.axiom.co/views/:id",
+        "params": [
+          {
+            "name": "id",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Retrieve view"
+    },
+    {
+      "info": {
+        "name": "Update view",
+        "type": "http"
+      },
+      "http": {
+        "method": "PUT",
+        "url": "https://api.axiom.co/views/:id",
+        "params": [
+          {
+            "name": "id",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Update view"
+    },
+    {
+      "info": {
+        "name": "Delete view",
+        "type": "http"
+      },
+      "http": {
+        "method": "DELETE",
+        "url": "https://api.axiom.co/views/:id",
+        "params": [
+          {
+            "name": "id",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Delete view"
+    },
+    {
+      "info": {
+        "name": "List all virtual fields",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://api.axiom.co/virtualfields"
+      },
+      "docs": "List all virtual fields"
+    },
+    {
+      "info": {
+        "name": "Create virtual field",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "https://api.axiom.co/virtualfields"
+      },
+      "docs": "Create virtual field"
+    },
+    {
+      "info": {
+        "name": "Retrieve virtual field",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://api.axiom.co/virtualfields/:id",
+        "params": [
+          {
+            "name": "id",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Retrieve virtual field"
+    },
+    {
+      "info": {
+        "name": "Update virtual field",
+        "type": "http"
+      },
+      "http": {
+        "method": "PUT",
+        "url": "https://api.axiom.co/virtualfields/:id",
+        "params": [
+          {
+            "name": "id",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Update virtual field"
+    },
+    {
+      "info": {
+        "name": "Delete virtual field",
+        "type": "http"
+      },
+      "http": {
+        "method": "DELETE",
+        "url": "https://api.axiom.co/virtualfields/:id",
+        "params": [
+          {
+            "name": "id",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Delete virtual field"
+    }
+  ],
+  "bundled": true
+}
