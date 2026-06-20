@@ -4,7 +4,7 @@ description: >-
   Axiom is a serverless log management and analytics platform that provides real-time insights into structured and
   unstructured data with fast querying capabilities for logs, events, and telemetry data.
 type: Index
-image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 tags:
   - Analytics
   - Log Management
