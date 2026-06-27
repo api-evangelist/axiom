@@ -50,7 +50,7 @@ common:
     url: https://axiom.co/terms
   - type: PrivacyPolicy
     url: https://axiom.co/privacy
-  - type: SignUp
+  - type: Signup
     url: https://app.axiom.co/register
   - type: Pricing
     url: https://axiom.co/pricing
