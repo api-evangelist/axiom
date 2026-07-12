@@ -36,6 +36,11 @@ apis:
       - type: AsyncAPI
         url: asyncapi/axiom-custom-webhook-asyncapi.yml
 common:
+  - type: DomainSecurity
+    url: security/axiom-domain-security.yml
+  - name: Agent Skills
+    url: https://github.com/axiomhq/skills
+    type: AgentSkills
   - type: LinkedIn
     url: https://www.linkedin.com/company/axiomhq
   - type: Portal
