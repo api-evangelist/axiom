@@ -5,7 +5,7 @@
       "source": "https://axiom.co/blog/feed.xml",
       "feed_url": "https://axiom.co/blog/feed.xml",
       "title": "",
-      "saved": 1,
+      "saved": 0,
       "method": "feed"
     },
     {
@@ -23,6 +23,6 @@
       "method": "discovered"
     }
   ],
-  "post_count": 59,
-  "fetched": "2026-06-27T12:03:07Z"
+  "post_count": 68,
+  "fetched": "2026-07-11T11:50:51Z"
 }
