@@ -36,6 +36,8 @@ apis:
       - type: AsyncAPI
         url: asyncapi/axiom-custom-webhook-asyncapi.yml
 common:
+  - type: AgenticAccess
+    url: agentic-access/axiom-agentic-access.yml
   - type: DomainSecurity
     url: security/axiom-domain-security.yml
   - name: Agent Skills
