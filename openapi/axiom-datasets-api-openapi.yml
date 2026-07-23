@@ -1,0 +1,347 @@
+openapi: 3.1.0
+info:
+  title: Axiom REST Annotations Datasets API
+  version: 1.0.0
+  description: REST API for Axiom serverless log management and analytics. Manage datasets, ingest data, run queries, and administer annotations, dashboards, monitors, notifiers, tokens, users, views, and other resources.
+servers:
+- url: https://api.axiom.co
+tags:
+- name: Datasets
+paths:
+  /datasets:
+    get:
+      summary: List all datasets
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Resource'
+      tags:
+      - Datasets
+    post:
+      summary: Create dataset
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Resource'
+      responses:
+        '201':
+          description: Created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Resource'
+      tags:
+      - Datasets
+  /datasets/{id}:
+    parameters:
+    - in: path
+      name: id
+      required: true
+      schema:
+        type: string
+    get:
+      summary: Retrieve dataset
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Resource'
+      tags:
+      - Datasets
+    put:
+      summary: Update dataset
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Resource'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Resource'
+      tags:
+      - Datasets
+    delete:
+      summary: Delete dataset
+      responses:
+        '204':
+          description: No Content
+      tags:
+      - Datasets
+  /datasets/{id}/fields:
+    parameters:
+    - in: path
+      name: id
+      required: true
+      schema:
+        type: string
+    get:
+      summary: List all fields in dataset
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Resource'
+      tags:
+      - Datasets
+  /datasets/{id}/fields/{name}:
+    parameters:
+    - in: path
+      name: id
+      required: true
+      schema:
+        type: string
+    - in: path
+      name: name
+      required: true
+      schema:
+        type: string
+    get:
+      summary: Retrieve field in dataset
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Resource'
+      tags:
+      - Datasets
+    put:
+      summary: Update field
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Resource'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Resource'
+      tags:
+      - Datasets
+  /datasets/{id}/tags:
+    parameters:
+    - in: path
+      name: id
+      required: true
+      schema:
+        type: string
+    get:
+      summary: Get tags for dataset
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Resource'
+      tags:
+      - Datasets
+  /datasets/{id}/tags/values:
+    parameters:
+    - in: path
+      name: id
+      required: true
+      schema:
+        type: string
+    get:
+      summary: Get tag values for dataset
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Resource'
+      tags:
+      - Datasets
+  /datasets/{id}/metrics:
+    parameters:
+    - in: path
+      name: id
+      required: true
+      schema:
+        type: string
+    get:
+      summary: Get metrics for dataset
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Resource'
+      tags:
+      - Datasets
+  /datasets/{id}/metrics/tags:
+    parameters:
+    - in: path
+      name: id
+      required: true
+      schema:
+        type: string
+    get:
+      summary: Get metric tags for dataset
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Resource'
+      tags:
+      - Datasets
+  /datasets/{id}/metrics/tags/values:
+    parameters:
+    - in: path
+      name: id
+      required: true
+      schema:
+        type: string
+    get:
+      summary: Get metric tag values for dataset
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Resource'
+      tags:
+      - Datasets
+  /datasets/{id}/trim:
+    parameters:
+    - in: path
+      name: id
+      required: true
+      schema:
+        type: string
+    post:
+      summary: Trim dataset
+      responses:
+        '200':
+          description: OK
+      tags:
+      - Datasets
+  /datasets/{id}/vacuum:
+    parameters:
+    - in: path
+      name: id
+      required: true
+      schema:
+        type: string
+    post:
+      summary: Vacuum dataset
+      responses:
+        '200':
+          description: OK
+      tags:
+      - Datasets
+  /datasets/{dataset}/ingest:
+    parameters:
+    - in: path
+      name: dataset
+      required: true
+      schema:
+        type: string
+    post:
+      summary: Ingest data to dataset
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: array
+              items:
+                type: object
+                additionalProperties: true
+      responses:
+        '200':
+          description: Ingest summary
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Resource'
+      tags:
+      - Datasets
+  /datasets/{dataset}/query:
+    parameters:
+    - in: path
+      name: dataset
+      required: true
+      schema:
+        type: string
+    post:
+      summary: Run query against dataset
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Resource'
+      responses:
+        '200':
+          description: Query result
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Resource'
+      tags:
+      - Datasets
+  /v1/datasets/{dataset}/ingest:
+    parameters:
+    - in: path
+      name: dataset
+      required: true
+      schema:
+        type: string
+    post:
+      summary: Ingest data to edge deployment
+      responses:
+        '200':
+          description: OK
+      tags:
+      - Datasets
+  /v1/datasets/{dataset}/query:
+    parameters:
+    - in: path
+      name: dataset
+      required: true
+      schema:
+        type: string
+    post:
+      summary: Run legacy query
+      responses:
+        '200':
+          description: OK
+      tags:
+      - Datasets
+components:
+  schemas:
+    Resource:
+      type: object
+      additionalProperties: true
+x-generated-from: https://axiom.co/docs/restapi/introduction
+x-generated-by: claude-crawl-2026-05-08

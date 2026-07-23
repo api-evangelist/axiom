@@ -1,0 +1,67 @@
+openapi: 3.1.0
+info:
+  title: Axiom REST Annotations Orgs API
+  version: 1.0.0
+  description: REST API for Axiom serverless log management and analytics. Manage datasets, ingest data, run queries, and administer annotations, dashboards, monitors, notifiers, tokens, users, views, and other resources.
+servers:
+- url: https://api.axiom.co
+tags:
+- name: Orgs
+paths:
+  /orgs:
+    get:
+      summary: List all orgs
+      responses:
+        '200':
+          description: OK
+      tags:
+      - Orgs
+    post:
+      summary: Create org
+      responses:
+        '201':
+          description: Created
+      tags:
+      - Orgs
+  /orgs/{id}:
+    parameters:
+    - in: path
+      name: id
+      required: true
+      schema:
+        type: string
+    get:
+      summary: Retrieve org
+      responses:
+        '200':
+          description: OK
+      tags:
+      - Orgs
+    put:
+      summary: Update org
+      responses:
+        '200':
+          description: OK
+      tags:
+      - Orgs
+  /orgs/{orgId}/users/{userId}:
+    parameters:
+    - in: path
+      name: orgId
+      required: true
+      schema:
+        type: string
+    - in: path
+      name: userId
+      required: true
+      schema:
+        type: string
+    delete:
+      summary: Delete user from org
+      responses:
+        '204':
+          description: No Content
+      tags:
+      - Orgs
+x-generated-from: https://axiom.co/docs/restapi/introduction
+x-generated-by: claude-crawl-2026-05-08

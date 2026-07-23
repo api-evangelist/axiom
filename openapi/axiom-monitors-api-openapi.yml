@@ -1,0 +1,69 @@
+openapi: 3.1.0
+info:
+  title: Axiom REST Annotations Monitors API
+  version: 1.0.0
+  description: REST API for Axiom serverless log management and analytics. Manage datasets, ingest data, run queries, and administer annotations, dashboards, monitors, notifiers, tokens, users, views, and other resources.
+servers:
+- url: https://api.axiom.co
+tags:
+- name: Monitors
+paths:
+  /monitors:
+    get:
+      summary: List all monitors
+      responses:
+        '200':
+          description: OK
+      tags:
+      - Monitors
+    post:
+      summary: Create monitor
+      responses:
+        '201':
+          description: Created
+      tags:
+      - Monitors
+  /monitors/{id}:
+    parameters:
+    - in: path
+      name: id
+      required: true
+      schema:
+        type: string
+    get:
+      summary: Retrieve monitor
+      responses:
+        '200':
+          description: OK
+      tags:
+      - Monitors
+    put:
+      summary: Update monitor
+      responses:
+        '200':
+          description: OK
+      tags:
+      - Monitors
+    delete:
+      summary: Delete monitor
+      responses:
+        '204':
+          description: No Content
+      tags:
+      - Monitors
+  /monitors/{id}/history:
+    parameters:
+    - in: path
+      name: id
+      required: true
+      schema:
+        type: string
+    get:
+      summary: Retrieve monitor history
+      responses:
+        '200':
+          description: OK
+      tags:
+      - Monitors
+x-generated-from: https://axiom.co/docs/restapi/introduction
+x-generated-by: claude-crawl-2026-05-08

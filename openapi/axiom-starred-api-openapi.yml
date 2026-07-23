@@ -1,0 +1,55 @@
+openapi: 3.1.0
+info:
+  title: Axiom REST Annotations Starred API
+  version: 1.0.0
+  description: REST API for Axiom serverless log management and analytics. Manage datasets, ingest data, run queries, and administer annotations, dashboards, monitors, notifiers, tokens, users, views, and other resources.
+servers:
+- url: https://api.axiom.co
+tags:
+- name: Starred
+paths:
+  /starred:
+    get:
+      summary: List all saved queries
+      responses:
+        '200':
+          description: OK
+      tags:
+      - Starred
+    post:
+      summary: Create saved query
+      responses:
+        '201':
+          description: Created
+      tags:
+      - Starred
+  /starred/{id}:
+    parameters:
+    - in: path
+      name: id
+      required: true
+      schema:
+        type: string
+    get:
+      summary: Retrieve saved query
+      responses:
+        '200':
+          description: OK
+      tags:
+      - Starred
+    put:
+      summary: Update saved query
+      responses:
+        '200':
+          description: OK
+      tags:
+      - Starred
+    delete:
+      summary: Delete saved query
+      responses:
+        '204':
+          description: No Content
+      tags:
+      - Starred
+x-generated-from: https://axiom.co/docs/restapi/introduction
+x-generated-by: claude-crawl-2026-05-08

@@ -1,0 +1,55 @@
+openapi: 3.1.0
+info:
+  title: Axiom REST Annotations Notifiers API
+  version: 1.0.0
+  description: REST API for Axiom serverless log management and analytics. Manage datasets, ingest data, run queries, and administer annotations, dashboards, monitors, notifiers, tokens, users, views, and other resources.
+servers:
+- url: https://api.axiom.co
+tags:
+- name: Notifiers
+paths:
+  /notifiers:
+    get:
+      summary: List all notifiers
+      responses:
+        '200':
+          description: OK
+      tags:
+      - Notifiers
+    post:
+      summary: Create notifier
+      responses:
+        '201':
+          description: Created
+      tags:
+      - Notifiers
+  /notifiers/{id}:
+    parameters:
+    - in: path
+      name: id
+      required: true
+      schema:
+        type: string
+    get:
+      summary: Retrieve notifier
+      responses:
+        '200':
+          description: OK
+      tags:
+      - Notifiers
+    put:
+      summary: Update notifier
+      responses:
+        '200':
+          description: OK
+      tags:
+      - Notifiers
+    delete:
+      summary: Delete notifier
+      responses:
+        '204':
+          description: No Content
+      tags:
+      - Notifiers
+x-generated-from: https://axiom.co/docs/restapi/introduction
+x-generated-by: claude-crawl-2026-05-08

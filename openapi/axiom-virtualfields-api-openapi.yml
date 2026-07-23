@@ -1,0 +1,55 @@
+openapi: 3.1.0
+info:
+  title: Axiom REST Annotations Virtualfields API
+  version: 1.0.0
+  description: REST API for Axiom serverless log management and analytics. Manage datasets, ingest data, run queries, and administer annotations, dashboards, monitors, notifiers, tokens, users, views, and other resources.
+servers:
+- url: https://api.axiom.co
+tags:
+- name: Virtualfields
+paths:
+  /virtualfields:
+    get:
+      summary: List all virtual fields
+      responses:
+        '200':
+          description: OK
+      tags:
+      - Virtualfields
+    post:
+      summary: Create virtual field
+      responses:
+        '201':
+          description: Created
+      tags:
+      - Virtualfields
+  /virtualfields/{id}:
+    parameters:
+    - in: path
+      name: id
+      required: true
+      schema:
+        type: string
+    get:
+      summary: Retrieve virtual field
+      responses:
+        '200':
+          description: OK
+      tags:
+      - Virtualfields
+    put:
+      summary: Update virtual field
+      responses:
+        '200':
+          description: OK
+      tags:
+      - Virtualfields
+    delete:
+      summary: Delete virtual field
+      responses:
+        '204':
+          description: No Content
+      tags:
+      - Virtualfields
+x-generated-from: https://axiom.co/docs/restapi/introduction
+x-generated-by: claude-crawl-2026-05-08
