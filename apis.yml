@@ -4,7 +4,19 @@ description: >-
   Axiom is a serverless log management and analytics platform that provides real-time insights into structured and
   unstructured data with fast querying capabilities for logs, events, and telemetry data.
 type: Index
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: freemium
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Freemium
+  confidence: medium
+  source:
+  - plans
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/axiom.png
 tags:
   - Analytics
   - Log Management
@@ -17,24 +29,246 @@ created: '2024-01-15'
 modified: '2026-05-29'
 specificationVersion: '0.19'
 apis:
-  - aid: axiom:axiom-api
-    name: Axiom API
-    description: RESTful API for ingesting, querying, and managing logs and events in Axiom.
-    humanURL: https://axiom.co/docs/restapi/introduction
-    baseURL: https://api.axiom.co
-    tags:
-      - Analytics
-      - Logging
-      - Observability
-    properties:
-      - type: Documentation
-        url: https://axiom.co/docs/restapi/introduction
-      - type: Authentication
-        url: https://axiom.co/docs/restapi/token
-      - type: OpenAPI
-        url: openapi/axiom-openapi.yml
-      - type: AsyncAPI
-        url: asyncapi/axiom-custom-webhook-asyncapi.yml
+- aid: axiom:axiom-annotations-api
+  name: Axiom Annotations API
+  description: The Annotations API from Axiom — 2 operation(s) for annotations.
+  humanURL: https://axiom.co/docs/restapi/introduction
+  baseURL: https://api.axiom.co
+  tags:
+  - Annotations
+  properties:
+  - type: OpenAPI
+    url: openapi/axiom-annotations-api-openapi.yml
+  - type: Documentation
+    url: https://axiom.co/docs/restapi/introduction
+  - type: Authentication
+    url: https://axiom.co/docs/restapi/token
+  - type: AsyncAPI
+    url: asyncapi/axiom-custom-webhook-asyncapi.yml
+- aid: axiom:axiom-dashboards-api
+  name: Axiom Dashboards API
+  description: The Dashboards API from Axiom — 2 operation(s) for dashboards.
+  humanURL: https://axiom.co/docs/restapi/introduction
+  baseURL: https://api.axiom.co
+  tags:
+  - Dashboards
+  properties:
+  - type: OpenAPI
+    url: openapi/axiom-dashboards-api-openapi.yml
+  - type: Documentation
+    url: https://axiom.co/docs/restapi/introduction
+  - type: Authentication
+    url: https://axiom.co/docs/restapi/token
+  - type: AsyncAPI
+    url: asyncapi/axiom-custom-webhook-asyncapi.yml
+- aid: axiom:axiom-datasets-api
+  name: Axiom Datasets API
+  description: The Datasets API from Axiom — 15 operation(s) for datasets.
+  humanURL: https://axiom.co/docs/restapi/introduction
+  baseURL: https://api.axiom.co
+  tags:
+  - Datasets
+  properties:
+  - type: OpenAPI
+    url: openapi/axiom-datasets-api-openapi.yml
+  - type: Documentation
+    url: https://axiom.co/docs/restapi/introduction
+  - type: Authentication
+    url: https://axiom.co/docs/restapi/token
+  - type: AsyncAPI
+    url: asyncapi/axiom-custom-webhook-asyncapi.yml
+- aid: axiom:axiom-edge-api
+  name: Axiom Edge API
+  description: The Edge API from Axiom — 3 operation(s) for edge.
+  humanURL: https://axiom.co/docs/restapi/introduction
+  baseURL: https://api.axiom.co
+  tags:
+  - Edge
+  properties:
+  - type: OpenAPI
+    url: openapi/axiom-edge-api-openapi.yml
+  - type: Documentation
+    url: https://axiom.co/docs/restapi/introduction
+  - type: Authentication
+    url: https://axiom.co/docs/restapi/token
+  - type: AsyncAPI
+    url: asyncapi/axiom-custom-webhook-asyncapi.yml
+- aid: axiom:axiom-groups-api
+  name: Axiom Groups API
+  description: The Groups API from Axiom — 2 operation(s) for groups.
+  humanURL: https://axiom.co/docs/restapi/introduction
+  baseURL: https://api.axiom.co
+  tags:
+  - Groups
+  properties:
+  - type: OpenAPI
+    url: openapi/axiom-groups-api-openapi.yml
+  - type: Documentation
+    url: https://axiom.co/docs/restapi/introduction
+  - type: Authentication
+    url: https://axiom.co/docs/restapi/token
+  - type: AsyncAPI
+    url: asyncapi/axiom-custom-webhook-asyncapi.yml
+- aid: axiom:axiom-mapfields-api
+  name: Axiom Mapfields API
+  description: The Mapfields API from Axiom — 1 operation(s) for mapfields.
+  humanURL: https://axiom.co/docs/restapi/introduction
+  baseURL: https://api.axiom.co
+  tags:
+  - Mapfields
+  properties:
+  - type: OpenAPI
+    url: openapi/axiom-mapfields-api-openapi.yml
+  - type: Documentation
+    url: https://axiom.co/docs/restapi/introduction
+  - type: Authentication
+    url: https://axiom.co/docs/restapi/token
+  - type: AsyncAPI
+    url: asyncapi/axiom-custom-webhook-asyncapi.yml
+- aid: axiom:axiom-monitors-api
+  name: Axiom Monitors API
+  description: The Monitors API from Axiom — 3 operation(s) for monitors.
+  humanURL: https://axiom.co/docs/restapi/introduction
+  baseURL: https://api.axiom.co
+  tags:
+  - Monitors
+  properties:
+  - type: OpenAPI
+    url: openapi/axiom-monitors-api-openapi.yml
+  - type: Documentation
+    url: https://axiom.co/docs/restapi/introduction
+  - type: Authentication
+    url: https://axiom.co/docs/restapi/token
+  - type: AsyncAPI
+    url: asyncapi/axiom-custom-webhook-asyncapi.yml
+- aid: axiom:axiom-notifiers-api
+  name: Axiom Notifiers API
+  description: The Notifiers API from Axiom — 2 operation(s) for notifiers.
+  humanURL: https://axiom.co/docs/restapi/introduction
+  baseURL: https://api.axiom.co
+  tags:
+  - Notifiers
+  properties:
+  - type: OpenAPI
+    url: openapi/axiom-notifiers-api-openapi.yml
+  - type: Documentation
+    url: https://axiom.co/docs/restapi/introduction
+  - type: Authentication
+    url: https://axiom.co/docs/restapi/token
+  - type: AsyncAPI
+    url: asyncapi/axiom-custom-webhook-asyncapi.yml
+- aid: axiom:axiom-orgs-api
+  name: Axiom Orgs API
+  description: The Orgs API from Axiom — 3 operation(s) for orgs.
+  humanURL: https://axiom.co/docs/restapi/introduction
+  baseURL: https://api.axiom.co
+  tags:
+  - Orgs
+  properties:
+  - type: OpenAPI
+    url: openapi/axiom-orgs-api-openapi.yml
+  - type: Documentation
+    url: https://axiom.co/docs/restapi/introduction
+  - type: Authentication
+    url: https://axiom.co/docs/restapi/token
+  - type: AsyncAPI
+    url: asyncapi/axiom-custom-webhook-asyncapi.yml
+- aid: axiom:axiom-roles-api
+  name: Axiom Roles API
+  description: The Roles API from Axiom — 2 operation(s) for roles.
+  humanURL: https://axiom.co/docs/restapi/introduction
+  baseURL: https://api.axiom.co
+  tags:
+  - Roles
+  properties:
+  - type: OpenAPI
+    url: openapi/axiom-roles-api-openapi.yml
+  - type: Documentation
+    url: https://axiom.co/docs/restapi/introduction
+  - type: Authentication
+    url: https://axiom.co/docs/restapi/token
+  - type: AsyncAPI
+    url: asyncapi/axiom-custom-webhook-asyncapi.yml
+- aid: axiom:axiom-starred-api
+  name: Axiom Starred API
+  description: The Starred API from Axiom — 2 operation(s) for starred.
+  humanURL: https://axiom.co/docs/restapi/introduction
+  baseURL: https://api.axiom.co
+  tags:
+  - Starred
+  properties:
+  - type: OpenAPI
+    url: openapi/axiom-starred-api-openapi.yml
+  - type: Documentation
+    url: https://axiom.co/docs/restapi/introduction
+  - type: Authentication
+    url: https://axiom.co/docs/restapi/token
+  - type: AsyncAPI
+    url: asyncapi/axiom-custom-webhook-asyncapi.yml
+- aid: axiom:axiom-tokens-api
+  name: Axiom Tokens API
+  description: The Tokens API from Axiom — 2 operation(s) for tokens.
+  humanURL: https://axiom.co/docs/restapi/introduction
+  baseURL: https://api.axiom.co
+  tags:
+  - Tokens
+  properties:
+  - type: OpenAPI
+    url: openapi/axiom-tokens-api-openapi.yml
+  - type: Documentation
+    url: https://axiom.co/docs/restapi/introduction
+  - type: Authentication
+    url: https://axiom.co/docs/restapi/token
+  - type: AsyncAPI
+    url: asyncapi/axiom-custom-webhook-asyncapi.yml
+- aid: axiom:axiom-users-api
+  name: Axiom Users API
+  description: The Users API from Axiom — 4 operation(s) for users.
+  humanURL: https://axiom.co/docs/restapi/introduction
+  baseURL: https://api.axiom.co
+  tags:
+  - Users
+  properties:
+  - type: OpenAPI
+    url: openapi/axiom-users-api-openapi.yml
+  - type: Documentation
+    url: https://axiom.co/docs/restapi/introduction
+  - type: Authentication
+    url: https://axiom.co/docs/restapi/token
+  - type: AsyncAPI
+    url: asyncapi/axiom-custom-webhook-asyncapi.yml
+- aid: axiom:axiom-views-api
+  name: Axiom Views API
+  description: The Views API from Axiom — 2 operation(s) for views.
+  humanURL: https://axiom.co/docs/restapi/introduction
+  baseURL: https://api.axiom.co
+  tags:
+  - Views
+  properties:
+  - type: OpenAPI
+    url: openapi/axiom-views-api-openapi.yml
+  - type: Documentation
+    url: https://axiom.co/docs/restapi/introduction
+  - type: Authentication
+    url: https://axiom.co/docs/restapi/token
+  - type: AsyncAPI
+    url: asyncapi/axiom-custom-webhook-asyncapi.yml
+- aid: axiom:axiom-virtualfields-api
+  name: Axiom Virtualfields API
+  description: The Virtualfields API from Axiom — 2 operation(s) for virtualfields.
+  humanURL: https://axiom.co/docs/restapi/introduction
+  baseURL: https://api.axiom.co
+  tags:
+  - Virtualfields
+  properties:
+  - type: OpenAPI
+    url: openapi/axiom-virtualfields-api-openapi.yml
+  - type: Documentation
+    url: https://axiom.co/docs/restapi/introduction
+  - type: Authentication
+    url: https://axiom.co/docs/restapi/token
+  - type: AsyncAPI
+    url: asyncapi/axiom-custom-webhook-asyncapi.yml
 common:
   - type: AgenticAccess
     url: agentic-access/axiom-agentic-access.yml
