@@ -1,0 +1,42 @@
+{
+  "provider": "axiom",
+  "sources": [
+    "axiom-annotations-api-openapi.yml",
+    "axiom-dashboards-api-openapi.yml",
+    "axiom-datasets-api-openapi.yml",
+    "axiom-edge-api-openapi.yml",
+    "axiom-groups-api-openapi.yml",
+    "axiom-mapfields-api-openapi.yml",
+    "axiom-monitors-api-openapi.yml",
+    "axiom-notifiers-api-openapi.yml",
+    "axiom-orgs-api-openapi.yml",
+    "axiom-roles-api-openapi.yml",
+    "axiom-starred-api-openapi.yml",
+    "axiom-tokens-api-openapi.yml",
+    "axiom-users-api-openapi.yml",
+    "axiom-views-api-openapi.yml",
+    "axiom-virtualfields-api-openapi.yml"
+  ],
+  "outputs": [
+    "axiom-annotations-api-openapi.yml",
+    "axiom-dashboards-api-openapi.yml",
+    "axiom-datasets-api-openapi.yml",
+    "axiom-edge-api-openapi.yml",
+    "axiom-groups-api-openapi.yml",
+    "axiom-mapfields-api-openapi.yml",
+    "axiom-monitors-api-openapi.yml",
+    "axiom-notifiers-api-openapi.yml",
+    "axiom-orgs-api-openapi.yml",
+    "axiom-roles-api-openapi.yml",
+    "axiom-starred-api-openapi.yml",
+    "axiom-tokens-api-openapi.yml",
+    "axiom-users-api-openapi.yml",
+    "axiom-views-api-openapi.yml",
+    "axiom-virtualfields-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
