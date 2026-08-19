@@ -27,7 +27,7 @@ tags:
 url: https://raw.githubusercontent.com/api-evangelist/axiom/refs/heads/main/apis.yml
 created: '2024-01-15'
 modified: '2026-05-29'
-specificationVersion: '0.19'
+specificationVersion: '0.23'
 apis:
 - aid: axiom:axiom-annotations-api
   name: Axiom Annotations API
