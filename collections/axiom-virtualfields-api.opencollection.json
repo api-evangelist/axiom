@@ -1,0 +1,94 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Axiom REST Annotations Virtualfields API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Virtualfields",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List all virtual fields",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.axiom.co/virtualfields"
+          },
+          "docs": "List all virtual fields"
+        },
+        {
+          "info": {
+            "name": "Create virtual field",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.axiom.co/virtualfields"
+          },
+          "docs": "Create virtual field"
+        },
+        {
+          "info": {
+            "name": "Retrieve virtual field",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.axiom.co/virtualfields/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Retrieve virtual field"
+        },
+        {
+          "info": {
+            "name": "Update virtual field",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://api.axiom.co/virtualfields/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Update virtual field"
+        },
+        {
+          "info": {
+            "name": "Delete virtual field",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://api.axiom.co/virtualfields/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete virtual field"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

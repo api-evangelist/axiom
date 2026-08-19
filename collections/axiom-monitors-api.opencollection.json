@@ -1,0 +1,112 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Axiom REST Annotations Monitors API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Monitors",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List all monitors",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.axiom.co/monitors"
+          },
+          "docs": "List all monitors"
+        },
+        {
+          "info": {
+            "name": "Create monitor",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.axiom.co/monitors"
+          },
+          "docs": "Create monitor"
+        },
+        {
+          "info": {
+            "name": "Retrieve monitor",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.axiom.co/monitors/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Retrieve monitor"
+        },
+        {
+          "info": {
+            "name": "Update monitor",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://api.axiom.co/monitors/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Update monitor"
+        },
+        {
+          "info": {
+            "name": "Delete monitor",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://api.axiom.co/monitors/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete monitor"
+        },
+        {
+          "info": {
+            "name": "Retrieve monitor history",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.axiom.co/monitors/:id/history",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Retrieve monitor history"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

@@ -1,0 +1,98 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Axiom REST Annotations Users API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Users",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List all users",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.axiom.co/users"
+          },
+          "docs": "List all users"
+        },
+        {
+          "info": {
+            "name": "Create user",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.axiom.co/users"
+          },
+          "docs": "Create user"
+        },
+        {
+          "info": {
+            "name": "Retrieve current user",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.axiom.co/users/current"
+          },
+          "docs": "Retrieve current user"
+        },
+        {
+          "info": {
+            "name": "Update current user",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://api.axiom.co/users/current"
+          },
+          "docs": "Update current user"
+        },
+        {
+          "info": {
+            "name": "Retrieve user",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.axiom.co/users/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Retrieve user"
+        },
+        {
+          "info": {
+            "name": "Update user role",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://api.axiom.co/users/:id/role",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Update user role"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

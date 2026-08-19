@@ -1,0 +1,62 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Axiom REST Annotations Mapfields API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Mapfields",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List all map fields",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.axiom.co/mapfields"
+          },
+          "docs": "List all map fields"
+        },
+        {
+          "info": {
+            "name": "Create map field",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.axiom.co/mapfields"
+          },
+          "docs": "Create map field"
+        },
+        {
+          "info": {
+            "name": "Update list of map fields",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://api.axiom.co/mapfields"
+          },
+          "docs": "Update list of map fields"
+        },
+        {
+          "info": {
+            "name": "Delete map fields",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://api.axiom.co/mapfields"
+          },
+          "docs": "Delete map fields"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

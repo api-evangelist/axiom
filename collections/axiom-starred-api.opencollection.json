@@ -1,0 +1,94 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Axiom REST Annotations Starred API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Starred",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List all saved queries",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.axiom.co/starred"
+          },
+          "docs": "List all saved queries"
+        },
+        {
+          "info": {
+            "name": "Create saved query",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.axiom.co/starred"
+          },
+          "docs": "Create saved query"
+        },
+        {
+          "info": {
+            "name": "Retrieve saved query",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.axiom.co/starred/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Retrieve saved query"
+        },
+        {
+          "info": {
+            "name": "Update saved query",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://api.axiom.co/starred/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Update saved query"
+        },
+        {
+          "info": {
+            "name": "Delete saved query",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://api.axiom.co/starred/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete saved query"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

@@ -1,0 +1,94 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Axiom REST Annotations Notifiers API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Notifiers",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List all notifiers",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.axiom.co/notifiers"
+          },
+          "docs": "List all notifiers"
+        },
+        {
+          "info": {
+            "name": "Create notifier",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.axiom.co/notifiers"
+          },
+          "docs": "Create notifier"
+        },
+        {
+          "info": {
+            "name": "Retrieve notifier",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.axiom.co/notifiers/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Retrieve notifier"
+        },
+        {
+          "info": {
+            "name": "Update notifier",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://api.axiom.co/notifiers/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Update notifier"
+        },
+        {
+          "info": {
+            "name": "Delete notifier",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://api.axiom.co/notifiers/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete notifier"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

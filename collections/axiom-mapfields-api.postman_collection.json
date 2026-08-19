@@ -1,0 +1,252 @@
+{
+  "item": [
+    {
+      "id": "f45bf5b2-b304-4798-856c-2953edb66c3e",
+      "name": "Mapfields",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "43cdbc7f-15c4-41af-a6d6-baf142804c62",
+          "name": "List all map fields",
+          "request": {
+            "name": "List all map fields",
+            "description": {},
+            "url": {
+              "path": [
+                "mapfields"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "d0f008a5-be59-4b0f-92f7-32348b59b9ed",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "mapfields"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "9b23f17b-0414-4ac9-b60d-194e6e11766f",
+          "name": "Create map field",
+          "request": {
+            "name": "Create map field",
+            "description": {},
+            "url": {
+              "path": [
+                "mapfields"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "a0bad7a2-2573-43b6-ba7a-80963a382378",
+              "name": "Created",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "mapfields"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "POST",
+                "body": {}
+              },
+              "status": "Created",
+              "code": 201,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "f4fa190e-9007-47b2-aa61-bc0f6b2dfcab",
+          "name": "Update list of map fields",
+          "request": {
+            "name": "Update list of map fields",
+            "description": {},
+            "url": {
+              "path": [
+                "mapfields"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "PUT",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "618a6472-6489-4166-8977-a8fac46853c9",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "mapfields"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "PUT",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "27e3ebfa-07ef-4237-91b6-89ffd8fe11e2",
+          "name": "Delete map fields",
+          "request": {
+            "name": "Delete map fields",
+            "description": {},
+            "url": {
+              "path": [
+                "mapfields"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "DELETE",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "e8672177-c40c-4cb1-b1c3-0788f014fe8e",
+              "name": "No Content",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "mapfields"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "No Content",
+              "code": 204,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.axiom.co",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "1ebb4c99-1c2d-484a-a0bb-fc978bd1666e",
+    "name": "Axiom REST Annotations Mapfields API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "REST API for Axiom serverless log management and analytics. Manage datasets, ingest data, run queries, and administer annotations, dashboards, monitors, notifiers, tokens, users, views, and other resources.",
+      "type": "text/plain"
+    }
+  }
+}

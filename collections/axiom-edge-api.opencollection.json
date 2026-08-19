@@ -1,0 +1,51 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Axiom REST Annotations Edge API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Edge",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Run APL query to edge deployment",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.axiom.co/v1/edge/query"
+          },
+          "docs": "Run APL query to edge deployment"
+        },
+        {
+          "info": {
+            "name": "Run batch query to edge deployment",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.axiom.co/v1/edge/query/batch"
+          },
+          "docs": "Run batch query to edge deployment"
+        },
+        {
+          "info": {
+            "name": "Run MPL query to edge deployment",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.axiom.co/v1/edge/metrics"
+          },
+          "docs": "Run MPL query to edge deployment"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
