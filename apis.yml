@@ -277,7 +277,7 @@ apis:
   humanURL: https://axiom.co/docs/restapi/introduction
   baseURL: https://api.axiom.co
   tags:
-  - Virtual Fields
+  - Virtualfields
   tags_raw:
   - Virtualfields
   properties:
