@@ -271,18 +271,16 @@ apis:
     url: https://axiom.co/docs/restapi/token
   - type: AsyncAPI
     url: asyncapi/axiom-custom-webhook-asyncapi.yml
-- aid: axiom:axiom-virtualfields-api
-  name: Axiom Virtualfields API
-  description: The Virtualfields API from Axiom — 2 operation(s) for virtualfields.
+- aid: axiom:axiom-virtual-fields-api
+  name: Axiom Virtual Fields API
+  description: The Virtual Fields API from Axiom — 2 operation(s) for virtual fields.
   humanURL: https://axiom.co/docs/restapi/introduction
   baseURL: https://api.axiom.co
   tags:
   - Virtual Fields
-  tags_raw:
-  - Virtualfields
   properties:
   - type: OpenAPI
-    url: openapi/axiom-virtualfields-api-openapi.yml
+    url: openapi/axiom-virtual-fields-api-openapi.yml
   - type: Documentation
     url: https://axiom.co/docs/restapi/introduction
   - type: Authentication
