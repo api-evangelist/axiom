@@ -1,6 +1,6 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
-  title: Axiom REST Annotations Dashboards API
+  title: Axiom REST Dashboards API
   version: 1.0.0
   description: REST API for Axiom serverless log management and analytics. Manage datasets, ingest data, run queries, and administer annotations, dashboards, monitors, notifiers, tokens, users, views, and other resources.
 servers:
@@ -22,6 +22,8 @@ paths:
                   $ref: '#/components/schemas/Resource'
       tags:
       - Dashboards
+      operationId: getDashboards
+      x-operation-id-source: derived
     post:
       summary: Create dashboard
       requestBody:
@@ -39,6 +41,8 @@ paths:
                 $ref: '#/components/schemas/Resource'
       tags:
       - Dashboards
+      operationId: postDashboards
+      x-operation-id-source: derived
   /dashboards/{uid}:
     parameters:
     - in: path
@@ -57,6 +61,8 @@ paths:
                 $ref: '#/components/schemas/Resource'
       tags:
       - Dashboards
+      operationId: getDashboardsByUid
+      x-operation-id-source: derived
     put:
       summary: Update dashboard
       requestBody:
@@ -74,6 +80,8 @@ paths:
                 $ref: '#/components/schemas/Resource'
       tags:
       - Dashboards
+      operationId: putDashboardsByUid
+      x-operation-id-source: derived
     delete:
       summary: Delete dashboard
       responses:
@@ -81,6 +89,8 @@ paths:
           description: No Content
       tags:
       - Dashboards
+      operationId: deleteDashboardsByUid
+      x-operation-id-source: derived
 components:
   schemas:
     Resource:

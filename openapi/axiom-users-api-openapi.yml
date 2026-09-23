@@ -1,6 +1,6 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
-  title: Axiom REST Annotations Users API
+  title: Axiom REST Users API
   version: 1.0.0
   description: REST API for Axiom serverless log management and analytics. Manage datasets, ingest data, run queries, and administer annotations, dashboards, monitors, notifiers, tokens, users, views, and other resources.
 servers:
@@ -16,6 +16,8 @@ paths:
           description: OK
       tags:
       - Users
+      operationId: getUsers
+      x-operation-id-source: derived
     post:
       summary: Create user
       responses:
@@ -23,6 +25,8 @@ paths:
           description: Created
       tags:
       - Users
+      operationId: postUsers
+      x-operation-id-source: derived
   /users/current:
     get:
       summary: Retrieve current user
@@ -31,6 +35,8 @@ paths:
           description: OK
       tags:
       - Users
+      operationId: getUsersCurrent
+      x-operation-id-source: derived
     put:
       summary: Update current user
       responses:
@@ -38,6 +44,8 @@ paths:
           description: OK
       tags:
       - Users
+      operationId: putUsersCurrent
+      x-operation-id-source: derived
   /users/{id}:
     parameters:
     - in: path
@@ -52,6 +60,8 @@ paths:
           description: OK
       tags:
       - Users
+      operationId: getUsersById
+      x-operation-id-source: derived
   /users/{id}/role:
     parameters:
     - in: path
@@ -66,5 +76,7 @@ paths:
           description: OK
       tags:
       - Users
+      operationId: putUsersByIdRole
+      x-operation-id-source: derived
 x-generated-from: https://axiom.co/docs/restapi/introduction
 x-generated-by: claude-crawl-2026-05-08
