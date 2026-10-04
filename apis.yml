@@ -291,6 +291,9 @@ apis:
   - type: AsyncAPI
     url: asyncapi/axiom-custom-webhook-asyncapi.yml
 common:
+  - type: CapabilityMap
+    url: capabilities/axiom-capability-edges.yml
+    name: Axiom Business Capability Map
   - type: Website
     url: https://www.axiom.co/
   - type: AgenticAccess
