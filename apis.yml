@@ -291,6 +291,12 @@ apis:
   - type: AsyncAPI
     url: asyncapi/axiom-custom-webhook-asyncapi.yml
 common:
+  - type: Plans
+    url: plans/axiom-plans-pricing.yml
+  - type: RateLimits
+    url: rate-limits/axiom-rate-limits.yml
+  - type: FinOps
+    url: finops/axiom-finops.yml
   - type: CapabilityMap
     url: capabilities/axiom-capability-edges.yml
     name: Axiom Business Capability Map
