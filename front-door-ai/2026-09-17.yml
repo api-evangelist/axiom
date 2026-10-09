@@ -7,15 +7,18 @@ front_door_ai:
   probed_at: '2026-09-17'
   host: www.axiom.co
   final_host: axiom.co
-  ownership: inherited
+  ownership: own
   owner: axiom
   shares_host_with:
   - axiom-controller
-  inherited_from: axiom.co
+  inherited_from: null
+  alias_of: axiom.co
   verdict: scored
-  score: null
+  score: 8
+  band: 4
+  band_label: moderate
   host_score: 8
-  density: null
+  density: 7.23
   words: 1106
   tiers:
     agentic: 4
